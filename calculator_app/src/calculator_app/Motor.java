@@ -31,4 +31,24 @@ public class Motor {
        else
            aktual_ertek/=szam % 1.0 == 0 ? (int) szam : szam;       
    }
+   
+    private void doubleConvert(String szam, Operator operator) throws Exception {
+        double dblSzam = Double.parseDouble(szam); //double
+        switch (operator) {
+            case OSSZEADAS:
+                p_Osszead(dblSzam);
+                break;
+            case KIVONAS:
+                p_Kivon(dblSzam);
+                break;
+            case SZORZAS:
+                p_Szoroz(dblSzam);
+                break;
+            case OSZTAS:
+                p_Oszt(dblSzam);
+                break;
+            default:
+                throw new AssertionError(operator.name());
+        }
+    }
 }
