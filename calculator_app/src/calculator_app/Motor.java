@@ -13,4 +13,22 @@ public class Motor {
     */
     
      private double aktual_ertek;
+     
+     private void p_Osszead (double szam){
+       aktual_ertek += szam % 1.0 == 0 ? (int) szam : szam;
+    }
+   private void p_Kivon (double szam){
+       aktual_ertek -= szam % 1.0 == 0 ? (int) szam : szam;
+   }
+   
+   private void p_Szoroz (double szam){
+       aktual_ertek*=szam % 1.0 == 0 ? (int) szam : szam;
+   }
+   
+   private void p_Oszt(double szam) throws Exception{
+       if(szam == 0)
+           throw new Exception ("Nullával nem lehet osztani!");
+       else
+           aktual_ertek/=szam % 1.0 == 0 ? (int) szam : szam;       
+   }
 }
