@@ -11,3 +11,8 @@ Manapság számos tudományterület számára készülnek Java alapú programok.
 A fentebb említett programok fejlesztése esetén nagy segítséget nyújthat az, ha egyes programelemek (esetünkben a számológép) előre el vannak készítve.
 Ezzel is csökkenteni lehet, többek között a bizonyos szoftverek elkészülési idejét, pénzügyi költségét, terhet vetetünk le a programzók válláról.
 
+3. Vágyálom rendszer
+
+Mivel a programunk működése igen egyszerű, így a felületét sem kell túl bonyolulnak elképzelni. Egy szokásos számológép kinézetét vettük alapul, 
+azaz, rendelkezik egy kijelzővel, mely az adatok és eredmények megjelenését hivatott szolgáni és egy vrtuális gombsorral, mellyel a működtetés töreténik.
+Fontosnak tartottuk a szofverbe integrálni a gombokat, ugyanis így tényleg minden eszközön (azokon is amelyeknek nincs fizikai imput rendszere) 100%-ban használható az app. A célunk egy mindenki számára hasznos és könnyen kezelhető eszköz létrehozása, mely könnyeddén integrálható más megoldásokba. Célunk még, hogy programunk, kis méretű és hatékony működésű legyen, ezek a tényezők manapság nem igen hagyhatóak figyelmen kívül. 
