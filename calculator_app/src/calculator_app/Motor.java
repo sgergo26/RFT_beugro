@@ -1,14 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package calculator_app;
 
-/**
- *
- * @author User
- */
 public class Motor {
+    /*
+    Az akutális értéket szeretnénk, ha nem tudnák manipulálni, ezért privát.
+    Hogy a érték módosítása során se férjenek hozzá kívülről, privát metódusokkal kell módosítani az értéket.
+    A privát metódusokban maradékos osztással (%) el tudjuk dönteni, hogy integer vagy double típusban kell visszaadni az értéket.
+    Végül egy privát switch-case alapján társítjuk a enum elemeit a megfelelő, privát metódusokkal/műveletekkel.
+    Azért String típusban kérjük be a számot, mert majd a View-nél a gombok eredménye String típusúak.
+    Végül pedig egy publikus metódus meghívja a switch-case-es privát metódus, mert az meghívja a privát műveleti metódust,
+    de a közvetett hívás miatt nem lehet befolyásolni az aktual_erteket. 
+    A publikus metódusokkat kell tesztelni.
+    */
     
+     private double aktual_ertek;
 }
