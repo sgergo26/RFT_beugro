@@ -51,4 +51,14 @@ public class Motor {
                 throw new AssertionError(operator.name());
         }
     }
+    
+    /*
+   A View felületen a gombok és az eventek hatására String típusú változókat kapunk.
+   Ezért, hogy az eredményt meg tudjuk jeleníteni a View felületen az aktual_ertek változót át kell alakítani String típusúvá.
+   */
+   public String eredmeny_String() {
+        return aktual_ertek % 1.0 == 0
+                ? Integer.toString((int) aktual_ertek)
+                : String.valueOf(aktual_ertek);
+    }
 }
