@@ -4,3 +4,10 @@ A cél egy egyszerú és letisztult, Java alapú számológép alkalmazás kész
 A szoftver egyelőre alapműveletek elvégzésére alkalmas, de később a funkciók köre bővíthető lesz.
 Fontos az egyszerű használat. A Java segítségével a a cél egy teljesen platformfüggetlen alkalmazás létrehozása. 
 A számológép segítséget nyújthat bármilyen olyan Java alapú szoftver fejlestésénél, melybe ilyen jellegű funkció szükséges.
+
+2. Jelenlegi helyzet
+
+Manapság számos tudományterület számára készülnek Java alapú programok. Számológépet szinte minden reál szemléletű tudományág esetén használnak.
+A fentebb említett programok fejlesztése esetén nagy segítséget nyújthat az, ha egyes programelemek (esetünkben a számológép) előre el vannak készítve.
+Ezzel is csökkenteni lehet, többek között a bizonyos szoftverek elkészülési idejét, pénzügyi költségét, terhet vetetünk le a programzók válláról.
+
