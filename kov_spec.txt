@@ -1,0 +1,6 @@
+1. Áttekintés
+
+A cél egy egyszerú és letisztult, Java alapú számológép alkalmazás készítése, mely később akár komplexebb rendszerekbe is beépíthető lesz.
+A szoftver egyelőre alapműveletek elvégzésére alkalmas, de később a funkciók köre bővíthető lesz.
+Fontos az egyszerű használat. A Java segítségével a a cél egy teljesen platformfüggetlen alkalmazás létrehozása. 
+A számológép segítséget nyújthat bármilyen olyan Java alapú szoftver fejlestésénél, melybe ilyen jellegű funkció szükséges.
