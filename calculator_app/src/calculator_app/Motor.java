@@ -61,4 +61,20 @@ public class Motor {
                 ? Integer.toString((int) aktual_ertek)
                 : String.valueOf(aktual_ertek);
     }
+   
+    public void osszeadas(String szam) throws Exception {
+        doubleConvert(szam, Operator.OSSZEADAS);
+    }
+
+    public void kivonas(String number) throws Exception {
+        doubleConvert(number, Operator.KIVONAS);
+    }
+
+    public void szorzas(String number) throws Exception {
+        doubleConvert(number, Operator.SZORZAS);
+    }
+
+    public void osztas(String number) throws Exception {
+        doubleConvert(number, Operator.OSZTAS);
+    }
 }
