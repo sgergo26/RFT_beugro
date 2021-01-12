@@ -28,3 +28,12 @@ Tehát, összességében a program, funkcióját tekintve egy egyszerű számol�
 A nyumerikus gombok segítségével megadunk egy számértéket -> ezek után megadjuk az elvégezni kívánt műveletet -> majd a művetelet második értéket, mellyel dolgozni szeretnénk -> ezek után vagy új műveletet írunk be (ha kettőnél több operandussal dolgoznánk) vagy  az egyenlőségjel "=" gomb segítségével pedig elvégeztetjük a műveletet, melynek eredményét a kijelző modulról tudjuk leolvasni. -> Mindezek után az új műveletet el is kezdhetjük. 
 A törlés gombnak minden esetben működésben kell lennie, azaz a kívánt művelet megadásának bármelyik pillanatában képsnek kell lennie az addig beírtak törlésére.
 Fontos, hogy az alkalmazás bezárásakor annak futása leálljon, hisz ez egy java alapú programnál nem magától értetődő.
+
+6. Jelenlegi üzleti folyamatok modellje
+
+Jelenleg nincs a piacon olyan egyszerű és kisméretű java alapú számológép, mely könnyen integrálható nagyobb projektekbe, ezért egy ilyen fejlesztésekor, mindig írni kell egy újat, ami időkiesést jelent, és mint az ismert az időkiesés megdobja a fejlesztési költségeket. Ezek az állandóan újra-újraírt megoldások pedig nagyban különbözhetnek egymástól kinézet és hatékonyság területén is, így a cégre jellemző egységes arculat kialakítása is nehézkes, illetve egy kevésbé hatékonyra megírt modul belezavarhat az amúgy a vállalatra jellemző, jól használható programok minőségébe. 
+
+
+
+
+
