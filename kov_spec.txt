@@ -15,4 +15,16 @@ Ezzel is csökkenteni lehet, többek között a bizonyos szoftverek elkészülé
 
 Mivel a programunk működése igen egyszerű, így a felületét sem kell túl bonyolulnak elképzelni. Egy szokásos számológép kinézetét vettük alapul, 
 azaz, rendelkezik egy kijelzővel, mely az adatok és eredmények megjelenését hivatott szolgáni és egy vrtuális gombsorral, mellyel a működtetés töreténik.
-Fontosnak tartottuk a szofverbe integrálni a gombokat, ugyanis így tényleg minden eszközön (azokon is amelyeknek nincs fizikai imput rendszere) 100%-ban használható az app. A célunk egy mindenki számára hasznos és könnyen kezelhető eszköz létrehozása, mely könnyeddén integrálható más megoldásokba. Célunk még, hogy programunk, kis méretű és hatékony működésű legyen, ezek a tényezők manapság nem igen hagyhatóak figyelmen kívül. 
+Fontosnak tartottuk a szofverbe integrálni a gombokat, ugyanis így tényleg minden eszközön (azokon is amelyeknek nincs fizikai imput rendszere) 100%-ban használható az app. A célunk egy mindenki számára hasznos és könnyen kezelhető eszköz létrehozása, mely könnyeddén integrálható más megoldásokba. Célunk még, hogy programunk, kis méretű és hatékony működésű legyen, ezek a tényezők manapság nem igen hagyhatóak figyelmen kívül.
+
+4. Funkcionális követelmények
+
+A program felülete 3 fő részre osztható, ezek funkciói az alábbiak:
+- Kijelző: A bevitt számok és műveletek, valamint a eredmények megjelenítését szolgáló egység. Alapállapotban üres. 2 fő funkciója van: Itt jelennek meg a bevitt értékek, majd a megadott műveletek outputjaként szolgál. Bár a programba csak egész számokat lehet bevinni, de a kijelzőnek alkalmasnak kell lennie tizedes tört számok megjelenítésére. Kezdeti állapotának visszaállítására egy külön funkcióbillentyű álljon rendelkezésre.
+- Numerikus gombsor: Virtuális gombsor, mely legfeljebb 10-es számrendszerbeli numerikus értékek bevitelére alkalmas, azaz az összes számjegynek szerepelnie kell rajta 0 és 9 között.
+- Funkcióbillentyűk: Szintén egy virtuális gombsor, mely a műveletek (összeadás, kivonás, szorzás, osztás, stb.) megadására szolgál. Része még egy egyenlőség gomb, mely az előtte megadott műveletek elvégzére szolgál. Itt kap helyet a törlés gomb is, mely alapértelmzett állapot visszaállítására szolgál.
+
+Tehát, összességében a program, funkcióját tekintve egy egyszerű számológép, azaz működése a következő:
+A nyumerikus gombok segítségével megadunk egy számértéket -> ezek után megadjuk az elvégezni kívánt műveletet -> majd a művetelet második értéket, mellyel dolgozni szeretnénk -> ezek után vagy új műveletet írunk be (ha kettőnél több operandussal dolgoznánk) vagy  az egyenlőségjel "=" gomb segítségével pedig elvégeztetjük a műveletet, melynek eredményét a kijelző modulról tudjuk leolvasni. -> Mindezek után az új műveletet el is kezdhetjük. 
+A törlés gombnak minden esetben működésben kell lennie, azaz a kívánt művelet megadásának bármelyik pillanatában képsnek kell lennie az addig beírtak törlésére.
+Fontos, hogy az alkalmazás bezárásakor annak futása leálljon, hisz ez egy java alapú programnál nem magától értetődő.
