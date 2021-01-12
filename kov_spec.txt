@@ -33,7 +33,9 @@ Fontos, hogy az alkalmazás bezárásakor annak futása leálljon, hisz ez egy j
 
 Jelenleg nincs a piacon olyan egyszerű és kisméretű java alapú számológép, mely könnyen integrálható nagyobb projektekbe, ezért egy ilyen fejlesztésekor, mindig írni kell egy újat, ami időkiesést jelent, és mint az ismert az időkiesés megdobja a fejlesztési költségeket. Ezek az állandóan újra-újraírt megoldások pedig nagyban különbözhetnek egymástól kinézet és hatékonyság területén is, így a cégre jellemző egységes arculat kialakítása is nehézkes, illetve egy kevésbé hatékonyra megírt modul belezavarhat az amúgy a vállalatra jellemző, jól használható programok minőségébe. 
 
+7. Igényelt üzleti folyamatok
 
+A fenti problémák orvolosára van szükség egy kisméretű, hatékony, könnyen integrélható eszköz képében, mely moduláris felépítésének köszönhetően később új funkciókkal látható el, illetve felülete egyszerűen az adott projekthez illeszthető. A szóban forgó program felületét és az ahhoz tartozó funkciókat ezen fejezet 4. pontjában írjuk le részletesen.
 
 
 
