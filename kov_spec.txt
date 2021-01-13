@@ -15,12 +15,16 @@ Ezzel is csökkenteni lehet, többek között a bizonyos szoftverek elkészülé
 
 Mivel a programunk működése igen egyszerű, így a felületét sem kell túl bonyolulnak elképzelni. Egy szokásos számológép kinézetét vettük alapul, 
 azaz, rendelkezik egy kijelzővel, mely az adatok és eredmények megjelenését hivatott szolgáni és egy vrtuális gombsorral, mellyel a működtetés töreténik.
-Fontosnak tartottuk a szofverbe integrálni a gombokat, ugyanis így tényleg minden eszközön (azokon is amelyeknek nincs fizikai imput rendszere) 100%-ban használható az app. A célunk egy mindenki számára hasznos és könnyen kezelhető eszköz létrehozása, mely könnyeddén integrálható más megoldásokba. Célunk még, hogy programunk, kis méretű és hatékony működésű legyen, ezek a tényezők manapság nem igen hagyhatóak figyelmen kívül.
+Fontosnak tartottuk a szofverbe integrálni a gombokat, ugyanis így tényleg minden eszközön (azokon is amelyeknek nincs fizikai imput rendszere) 100%-ban használható az app. 
+A célunk egy mindenki számára hasznos és könnyen kezelhető eszköz létrehozása, mely könnyeddén integrálható más megoldásokba. Célunk még, hogy programunk, kis méretű és hatékony működésű legyen, ezek a tényezők manapság nem igen hagyhatóak figyelmen kívül.
 
 4. Funkcionális követelmények
 
 A program felülete 3 fő részre osztható, ezek funkciói az alábbiak:
-- Kijelző: A bevitt számok és műveletek, valamint a eredmények megjelenítését szolgáló egység. Alapállapotban üres. 2 fő funkciója van: Itt jelennek meg a bevitt értékek, majd a megadott műveletek outputjaként szolgál. Bár a programba csak egész számokat lehet bevinni, de a kijelzőnek alkalmasnak kell lennie tizedes tört számok megjelenítésére. Kezdeti állapotának visszaállítására egy külön funkcióbillentyű álljon rendelkezésre.
+- Kijelző: A bevitt számok és műveletek, valamint a eredmények megjelenítését szolgáló egység. 
+Alapállapotban üres. 2 fő funkciója van: Itt jelennek meg a bevitt értékek, majd a megadott műveletek outputjaként szolgál.
+Bár a programba csak egész számokat lehet bevinni, de a kijelzőnek alkalmasnak kell lennie tizedes tört számok megjelenítésére. 
+Kezdeti állapotának visszaállítására egy külön funkcióbillentyű álljon rendelkezésre.
 - Numerikus gombsor: Virtuális gombsor, mely legfeljebb 10-es számrendszerbeli numerikus értékek bevitelére alkalmas, azaz az összes számjegynek szerepelnie kell rajta 0 és 9 között.
 - Funkcióbillentyűk: Szintén egy virtuális gombsor, mely a műveletek (összeadás, kivonás, szorzás, osztás, stb.) megadására szolgál. Része még egy egyenlőség gomb, mely az előtte megadott műveletek elvégzére szolgál. Itt kap helyet a törlés gomb is, mely alapértelmzett állapot visszaállítására szolgál.
 
@@ -31,11 +35,15 @@ Fontos, hogy az alkalmazás bezárásakor annak futása leálljon, hisz ez egy j
 
 6. Jelenlegi üzleti folyamatok modellje
 
-Jelenleg nincs a piacon olyan egyszerű és kisméretű java alapú számológép, mely könnyen integrálható nagyobb projektekbe, ezért egy ilyen fejlesztésekor, mindig írni kell egy újat, ami időkiesést jelent, és mint az ismert az időkiesés megdobja a fejlesztési költségeket. Ezek az állandóan újra-újraírt megoldások pedig nagyban különbözhetnek egymástól kinézet és hatékonyság területén is, így a cégre jellemző egységes arculat kialakítása is nehézkes, illetve egy kevésbé hatékonyra megírt modul belezavarhat az amúgy a vállalatra jellemző, jól használható programok minőségébe. 
+Jelenleg nincs a piacon olyan egyszerű és kisméretű java alapú számológép, mely könnyen integrálható nagyobb projektekbe, 
+ezért egy ilyen fejlesztésekor, mindig írni kell egy újat, ami időkiesést jelent, és mint az ismert az időkiesés megdobja a fejlesztési költségeket. 
+Ezek az állandóan újra-újraírt megoldások pedig nagyban különbözhetnek egymástól kinézet és hatékonyság területén is, így a cégre jellemző egységes arculat kialakítása is nehézkes, illetve egy kevésbé hatékonyra megírt modul belezavarhat az amúgy a vállalatra jellemző, jól használható programok minőségébe. 
 
 7. Igényelt üzleti folyamatok
 
-A fenti problémák orvolosára van szükség egy kisméretű, hatékony, könnyen integrélható eszköz képében, mely moduláris felépítésének köszönhetően később új funkciókkal látható el, illetve felülete egyszerűen az adott projekthez illeszthető. A szóban forgó program felületét és az ahhoz tartozó funkciókat ezen fejezet 4. pontjában írjuk le részletesen.
+A fenti problémák orvolosára van szükség egy kisméretű, hatékony, könnyen integrélható eszköz képében, 
+mely moduláris felépítésének köszönhetően később új funkciókkal látható el, illetve felülete egyszerűen az adott projekthez illeszthető.
+A szóban forgó program felületét és az ahhoz tartozó funkciókat ezen fejezet 4. pontjában írjuk le részletesen.
 
 8. Követelménylista
 
@@ -50,8 +58,10 @@ K4             Funkciógombok       Alapvető matematikai műveletek (+,-,*,/) m
 9. Nem funkcionális követelmények
 
 Bár, már korábban említésre került, de ebben a pontban össze is szedjük, hogy a fentebb említett funkciók mellet milyen, más tulajdonságokat várunk el a szovftverterméktől. 
-- A legfontosabb, hogy hatékony legyen, azaz, Kis mértékű memóriahasználat és processzorterhelés mellett végezze el az adott műveleteket. Ez több szempontból is jelentős: szoftvereink igen csak hatékonynak bizonyulnak a piac többi résztvevőjével szemben, ezt a pozíciót kívánjuk megtartani, illetve mi a legtöbb eszkötípusra (nem túl nagy teljesítményűekre is) fejlesztünk programokat, a számológépnek ezen is futnia kell.
+- A legfontosabb, hogy hatékony legyen, azaz, Kis mértékű memóriahasználat és processzorterhelés mellett végezze el az adott műveleteket. 
+Ez több szempontból is jelentős: szoftvereink igen csak hatékonynak bizonyulnak a piac többi résztvevőjével szemben, ezt a pozíciót kívánjuk megtartani, illetve mi a legtöbb eszkötípusra (nem túl nagy teljesítményűekre is) fejlesztünk programokat, a számológépnek ezen is futnia kell.
 - Programjaink széleskörű használói bázisnak készülnek, így fontos, hogy minden egyes moduljuk egyszerűen, egyértelműen és kényelmesen használható legyen, az ne igényeljen semmiféle szakképzettséget, vagy komolyabb számítógépes jártasságot.
-- Fontos még az egyszerű meglenés, a követelményeket úgy állítottuk, össze, hogy csak a lefontosabb elemek legyenek kint a felületen. Az alkalmazásnak illeni kell a minimalista, letisztult kinézethez, mely cégünk termékeinek sajátossága.
+- Fontos még az egyszerű meglenés, a követelményeket úgy állítottuk, össze, hogy csak a lefontosabb elemek legyenek kint a felületen. 
+Az alkalmazásnak illeni kell a minimalista, letisztult kinézethez, mely cégünk termékeinek sajátossága.
 - A skálázhatóság, bővíthetőség elhanyagolható tényezők ebben az esetben, hisz a modult csak készen és csak használatra tervezzük megoldásainkba illeszteni.
 
