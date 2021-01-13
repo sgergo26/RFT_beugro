@@ -1,6 +1,6 @@
 1. Áttekintés
 
-A cél egy egyszerú és letisztult, Java alapú számológép alkalmazás készítése, mely később akár komplexebb rendszerekbe is beépíthető lesz.
+A cél egy egyszerű és letisztult, Java alapú számológép alkalmazás készítése, mely később akár komplexebb rendszerekbe is beépíthető lesz.
 A szoftver egyelőre alapműveletek elvégzésére alkalmas, de később a funkciók köre bővíthető lesz.
 Fontos az egyszerű használat. A Java segítségével a a cél egy teljesen platformfüggetlen alkalmazás létrehozása. 
 A számológép segítséget nyújthat bármilyen olyan Java alapú szoftver fejlestésénél, melybe ilyen jellegű funkció szükséges.
@@ -9,14 +9,14 @@ A számológép segítséget nyújthat bármilyen olyan Java alapú szoftver fej
 
 Manapság számos tudományterület számára készülnek Java alapú programok. Számológépet szinte minden reál szemléletű tudományág esetén használnak.
 A fentebb említett programok fejlesztése esetén nagy segítséget nyújthat az, ha egyes programelemek (esetünkben a számológép) előre el vannak készítve.
-Ezzel is csökkenteni lehet, többek között a bizonyos szoftverek elkészülési idejét, pénzügyi költségét, terhet vetetünk le a programzók válláról.
+Ezzel is csökkenteni lehet, többek között, a bizonyos szoftverek elkészülési idejét, pénzügyi költségét, terhet vetetünk le a programzók válláról.
 
 3. Vágyálom rendszer
 
-Mivel a programunk működése igen egyszerű, így a felületét sem kell túl bonyolulnak elképzelni. Egy szokásos számológép kinézetét vettük alapul, 
-azaz, rendelkezik egy kijelzővel, mely az adatok és eredmények megjelenését hivatott szolgáni és egy vrtuális gombsorral, mellyel a működtetés töreténik.
-Fontosnak tartottuk a szofverbe integrálni a gombokat, ugyanis így tényleg minden eszközön (azokon is amelyeknek nincs fizikai imput rendszere) 100%-ban használható az app. 
-A célunk egy mindenki számára hasznos és könnyen kezelhető eszköz létrehozása, mely könnyeddén integrálható más megoldásokba. Célunk még, hogy programunk, kis méretű és hatékony működésű legyen, ezek a tényezők manapság nem igen hagyhatóak figyelmen kívül.
+Mivel a programunk működése igen egyszerű, így a felületét sem kell túl bonyolulnak elképzelni. Egy szokásos számológép kinézetét vegyük alapul, 
+azaz, rendelkezik egy kijelzővel, mely az adatok és eredmények megjelenését hivatott szolgáni, és egy virtuális gombsorral, mellyel a működtetés töreténik.
+Fontosnak tartottuk a szoftverbe integrálni a gombokat, ugyanis így tényleg minden eszközön (azokon is amelyeknek nincs fizikai input rendszere) 100%-ban használható az app. 
+A célunk egy mindenki számára hasznos és könnyen kezelhető eszköz létrehozása, mely könnyedén integrálható más megoldásokba. Célunk még, hogy programunk, kis méretű és hatékony működésű legyen, ezek a tényezők manapság nem igen hagyhatóak figyelmen kívül.
 
 4. Funkcionális követelmények
 
@@ -29,7 +29,8 @@ Kezdeti állapotának visszaállítására egy külön funkcióbillentyű álljo
 - Funkcióbillentyűk: Szintén egy virtuális gombsor, mely a műveletek (összeadás, kivonás, szorzás, osztás, stb.) megadására szolgál. Része még egy egyenlőség gomb, mely az előtte megadott műveletek elvégzére szolgál. Itt kap helyet a törlés gomb is, mely alapértelmzett állapot visszaállítására szolgál.
 
 Tehát, összességében a program, funkcióját tekintve egy egyszerű számológép, azaz működése a következő:
-A nyumerikus gombok segítségével megadunk egy számértéket -> ezek után megadjuk az elvégezni kívánt műveletet -> majd a művetelet második értéket, mellyel dolgozni szeretnénk -> ezek után vagy új műveletet írunk be (ha kettőnél több operandussal dolgoznánk) vagy  az egyenlőségjel "=" gomb segítségével pedig elvégeztetjük a műveletet, melynek eredményét a kijelző modulról tudjuk leolvasni. -> Mindezek után az új műveletet el is kezdhetjük. 
+A nyumerikus gombok segítségével megadunk egy számértéket -> ezek után megadjuk az elvégezni kívánt műveletet -> majd a művetelet második értéket, mellyel dolgozni szeretnénk -> ezek után vagy új műveletet írunk be (ha kettőnél több operandussal dolgoznánk) vagy  az egyenlőségjel "=" gomb segítségével pedig elvégeztetjük a műveletet, melynek eredményét a kijelző modulról tudjuk leolvasni. -> 
+-> Mindezek után az új műveletet el is kezdhetjük. 
 A törlés gombnak minden esetben működésben kell lennie, azaz a kívánt művelet megadásának bármelyik pillanatában képsnek kell lennie az addig beírtak törlésére.
 Fontos, hogy az alkalmazás bezárásakor annak futása leálljon, hisz ez egy java alapú programnál nem magától értetődő.
 
@@ -41,7 +42,7 @@ Ezek az állandóan újra-újraírt megoldások pedig nagyban különbözhetnek 
 
 7. Igényelt üzleti folyamatok
 
-A fenti problémák orvolosára van szükség egy kisméretű, hatékony, könnyen integrélható eszköz képében, 
+A fenti problémák orvolosára van szükség egy kisméretű, hatékony, könnyen integrálható eszköz képében, 
 mely moduláris felépítésének köszönhetően később új funkciókkal látható el, illetve felülete egyszerűen az adott projekthez illeszthető.
 A szóban forgó program felületét és az ahhoz tartozó funkciókat ezen fejezet 4. pontjában írjuk le részletesen.
 
@@ -70,11 +71,12 @@ Az alkalmazásnak illeni kell a minimalista, letisztult kinézethez, mely cégü
 A következő pontban az igényfelméréskor készült interjú kérdéseit vázoljuk, melyre adott válaszok mindkét fél számára jegyzőkönyvként funkcionálnak
 
 -Funkcionalitást meghatározó tényzők:
- a, Milyen matematekai funkciókat várnak el a programtól?
+ a, Milyen matematikai funkciókat várnak el a programtól?
  b, Milyen jellegű számokkal (tört vagy egész) kívánnak dolgozni?
- c, Kívánnak a 10-esen kívül más számrendszerben műveleteket végezteni a programmal?
+ c, Kívánnak a 10-esen kívül, más számrendszerben műveleteket végezteni a programmal?
  d, Nem egész eredményeknél hány tizedesjegy az elvárt?
  e, Legyen-e meghatározva az egy folyamaton belül végezhető műveletek maximális száma?
+ f, Az alkalmazásnak kell visszaadnia/átadnia értéket más programrészek számára?
 
 -Megjelenést meghatározó tényezők:
  a, Milyen eszközökön tervezik megjeleníteni a programot?
@@ -88,4 +90,12 @@ A következő pontban az igényfelméréskor készült interjú kérdéseit váz
  b, Van-e valamilyen megkötésük a program sebességét illetően?
  c, Milyen módszerrel kívánják programunkat az önök megoldásába integrálni?
  d, Milyen számtípusokal (pl:fixpontos, lebegőpontos) dolgozzon az alkalmazásunk?
+
+11. Közös fogalomtár
+
+- Vituális billenyűk        -       Maguk a gombok a képernyőn, a felület részeként jelennek meg. Működtetésük egérrel vagy érintőkijelzővel lehetséges
+- Kijelző                   -       Egy változó adattartatlmú szöveges mező
+- Kezdeti vagy alapállapot  -       A megnyitáskori állapot, azaz a számológép "kijelzője üres, értéket nem tartalmaz, nincs folyamatban lévő művelet
+- Piac                      -       A szoftverpiac egésze, magában foglalja a szabad és fizetős programok listáját.
+- Adatok vissza/átadása     -       Lehetőség van arra, hogy a program valamilyen interfészen keresztül megossza az aktuális művelet erdményét.
 
