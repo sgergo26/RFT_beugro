@@ -65,3 +65,27 @@ Ez több szempontból is jelentős: szoftvereink igen csak hatékonynak bizonyul
 Az alkalmazásnak illeni kell a minimalista, letisztult kinézethez, mely cégünk termékeinek sajátossága.
 - A skálázhatóság, bővíthetőség elhanyagolható tényezők ebben az esetben, hisz a modult csak készen és csak használatra tervezzük megoldásainkba illeszteni.
 
+10. Kérdőív kérdések irányított interjúhoz
+
+A következő pontban az igényfelméréskor készült interjú kérdéseit vázoljuk, melyre adott válaszok mindkét fél számára jegyzőkönyvként funkcionálnak
+
+-Funkcionalitást meghatározó tényzők:
+ a, Milyen matematekai funkciókat várnak el a programtól?
+ b, Milyen jellegű számokkal (tört vagy egész) kívánnak dolgozni?
+ c, Kívánnak a 10-esen kívül más számrendszerben műveleteket végezteni a programmal?
+ d, Nem egész eredményeknél hány tizedesjegy az elvárt?
+ e, Legyen-e meghatározva az egy folyamaton belül végezhető műveletek maximális száma?
+
+-Megjelenést meghatározó tényezők:
+ a, Milyen eszközökön tervezik megjeleníteni a programot?
+ b, Van valamilyen, a vállalatra jellemző szín/dizájnterv?
+ c, Készüljön gyengénlátóknak szánt, nagy karakterméretű vagy magas kontrasztú felület és az annak beállítását célzó opció?
+ d, Lehessen az ablakot a háttérbe állítani?
+ e, Van-e valamilyen megkötés a felület maximális méretét illetően?
+
+-Futtatási környezetet befolyásoló tényezők:
+ a, Milyen típusú Java megoldásokat használ az önök cége a fejlesztés során? (pl: swing, stb.)
+ b, Van-e valamilyen megkötésük a program sebességét illetően?
+ c, Milyen módszerrel kívánják programunkat az önök megoldásába integrálni?
+ d, Milyen számtípusokal (pl:fixpontos, lebegőpontos) dolgozzon az alkalmazásunk?
+
