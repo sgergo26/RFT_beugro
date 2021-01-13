@@ -47,4 +47,11 @@ K3             Numerikus gombsor   Az számszerű adatok bevitelére használato
 K4             Funkciógombok       Alapvető matematikai műveletek (+,-,*,/) megadására és elvégzésére (=) használjuk. Része egy törlésre szolgáló gomb (C) is.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+9. Nem funkcionális követelmények
+
+Bár, már korábban említésre került, de ebben a pontban össze is szedjük, hogy a fentebb említett funkciók mellet milyen, más tulajdonságokat várunk el a szovftverterméktől. 
+- A legfontosabb, hogy hatékony legyen, azaz, Kis mértékű memóriahasználat és processzorterhelés mellett végezze el az adott műveleteket. Ez több szempontból is jelentős: szoftvereink igen csak hatékonynak bizonyulnak a piac többi résztvevőjével szemben, ezt a pozíciót kívánjuk megtartani, illetve mi a legtöbb eszkötípusra (nem túl nagy teljesítményűekre is) fejlesztünk programokat, a számológépnek ezen is futnia kell.
+- Programjaink széleskörű használói bázisnak készülnek, így fontos, hogy minden egyes moduljuk egyszerűen, egyértelműen és kényelmesen használható legyen, az ne igényeljen semmiféle szakképzettséget, vagy komolyabb számítógépes jártasságot.
+- Fontos még az egyszerű meglenés, a követelményeket úgy állítottuk, össze, hogy csak a lefontosabb elemek legyenek kint a felületen. Az alkalmazásnak illeni kell a minimalista, letisztult kinézethez, mely cégünk termékeinek sajátossága.
+- A skálázhatóság, bővíthetőség elhanyagolható tényezők ebben az esetben, hisz a modult csak készen és csak használatra tervezzük megoldásainkba illeszteni.
 
