@@ -37,5 +37,14 @@ Jelenleg nincs a piacon olyan egyszerű és kisméretű java alapú számológé
 
 A fenti problémák orvolosára van szükség egy kisméretű, hatékony, könnyen integrélható eszköz képében, mely moduláris felépítésének köszönhetően később új funkciókkal látható el, illetve felülete egyszerűen az adott projekthez illeszthető. A szóban forgó program felületét és az ahhoz tartozó funkciókat ezen fejezet 4. pontjában írjuk le részletesen.
 
+8. Követelménylista
+
+ID              NÉV                 KIFEJTÉS
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+K1             Felület             Egyszerű egyablakos felület, melyen a az alábbi modulok találhatóak.
+K2             Kijelző             Az adatok bevitelére és az eredmények kiírására szánt modul, alapértélmezett állapotában üres, a benne lévő érték törölhető
+K3             Numerikus gombsor   Az számszerű adatok bevitelére használatos virtuális megoldás, segítségével 0 és 9 közötti számok adhatóak meg.
+K4             Funkciógombok       Alapvető matematikai műveletek (+,-,*,/) megadására és elvégzésére (=) használjuk. Része egy törlésre szolgáló gomb (C) is.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
