@@ -153,14 +153,54 @@ public class MotorTest {
     /**
      * Test of osztas method, of class Motor.
      */
-    @Test
+     @Test
     public void testOsztas() throws Exception {
         System.out.println("osztas");
-        String number = "";
+        String szam = "95.7";
+        String szam2 = "7";
+        
+        double atszam = Double.parseDouble(szam);
+        double atszam2 = Double.parseDouble(szam2);
+        double eredmeny;
+        try
+        {
+             eredmeny = atszam / atszam2;
+        }
+        catch(ArithmeticException e)
+        {
+            eredmeny = atszam;
+        } 
+        
         Motor instance = new Motor();
-        instance.osztas(number);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        /*
+        A aktual_ertek változó értéke null, ezért először hozzá kell adni az első számot
+        */
+        instance.osszeadas(szam);
+        instance.osztas(szam2);
+        /*
+        A logikai vizsgálat azért szükséges, mert a tesztadatok típusát segít meghatározni és konvertálni azokat string típusra.
+        Ily módon hasonlítható össze a teszteredmény a várható eredménnyel,
+        hiszen csak az eredmeny_String() metódus segítségével lehet az aktual_ertek változó értékét kiolvasni.
+        */
+        try
+        {
+            if(eredmeny % 1.0 == 0)
+            {
+                String ref = Integer.toString((int)eredmeny);
+                assertEquals(ref, instance.eredmeny_String());
+
+            }
+            else
+            {
+                String ref = String.valueOf(eredmeny);
+                assertEquals(ref, instance.eredmeny_String());
+            } 
+        }
+        catch(NullPointerException e)
+        {
+            System.out.println("NullPointerException!");
+           
+        }
     }
     
 }
