@@ -31,14 +31,15 @@ public class MotorTest {
      * Test of eredmeny_String method, of class Motor.
      */
     @Test
-    public void testEredmeny_String() {
+    public void testEredmeny_String() throws Exception {
         System.out.println("eredmeny_String");
         Motor instance = new Motor();
-        String expResult = "";
-        String result = instance.eredmeny_String();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String szam = "45.0";
+        // Az aktual_ertek értéke 0-val lesz egyenlő?
+        instance.osszeadas(szam);
+        String eredmeny =  instance.eredmeny_String();
+        String exp = "45";
+        assertEquals(exp, eredmeny);
     }
 
     /**
