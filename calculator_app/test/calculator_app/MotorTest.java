@@ -119,11 +119,35 @@ public class MotorTest {
     @Test
     public void testSzorzas() throws Exception {
         System.out.println("szorzas");
-        String number = "";
+        String szam = "95.7";
+        String szam2 = "55.8";
+        
+        double atszam = Double.parseDouble(szam);
+        double atszam2 = Double.parseDouble(szam2);
+        double eredmeny = atszam * atszam2;
+        
         Motor instance = new Motor();
-        instance.szorzas(number);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        /*
+        A aktual_ertek változó értéke null, ezért először hozzá kell adni az első számot
+        */
+        instance.osszeadas(szam);
+        instance.szorzas(szam2);
+        /*
+        A logikai vizsgálat azért szükséges, mert a tesztadatok típusát segít meghatározni és konvertálni azokat string típusra.
+        Ily módon hasonlítható össze a teszteredmény a várható eredménnyel,
+        hiszen csak az eredmeny_String() metódus segítségével lehet az aktual_ertek változó értékét kiolvasni.
+        */
+        if(eredmeny % 1.0 == 0)
+        {
+            String ref = Integer.toString((int)eredmeny);
+            assertEquals(ref, instance.eredmeny_String());
+            
+        }
+        else
+        {
+            String ref = String.valueOf(eredmeny);
+            assertEquals(ref, instance.eredmeny_String());
+        }
     }
 
     /**
