@@ -48,11 +48,32 @@ public class MotorTest {
     @Test
     public void testOsszeadas() throws Exception {
         System.out.println("osszeadas");
-        String szam = "";
+        String szam = "45.0";
+        String szam2 = "55.8";
+        
+        double atszam = Double.parseDouble(szam);
+        double atszam2 = Double.parseDouble(szam2);
+        double eredmeny = atszam + atszam2;
+        
         Motor instance = new Motor();
         instance.osszeadas(szam);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.osszeadas(szam2);
+        /*
+        A logikai vizsgálat azért szükséges, mert a tesztadatok típusát segít meghatározni és konvertálni azokat string típusra.
+        Ily módon hasonlítható össze a teszteredmény a várható eredménnyel,
+        hiszen csak az eredmeny_String() metódus segítségével lehet az aktual_ertek változó értékét kiolvasni.
+        */
+        if(eredmeny % 1.0 == 0)
+        {
+            String ref = Integer.toString((int)eredmeny);
+            assertEquals(ref, instance.eredmeny_String());
+            
+        }
+        else
+        {
+            String ref = String.valueOf(eredmeny);
+            assertEquals(ref, instance.eredmeny_String());
+        }
     }
 
     /**
