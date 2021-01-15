@@ -30,7 +30,14 @@ public class CalculatorView {
 		// 1. operációs panel
         ActionListener operationListener = new OperationListener();
         JPanel operationPanel1 = new JPanel();
-		
+		//Műveleti jelek és hozzá gombok adása
+        String[] operationPanelNames1 = new String[]{"+", "-", "*", "/"};
+        operationPanel1.setLayout(new GridLayout(2, 2, 2, 2));
+        for (String anOperationPanelNames1 : operationPanelNames1) {
+            JButton b = new JButton(anOperationPanelNames1);
+            operationPanel1.add(b);
+            b.addActionListener(operationListener);
+        }
     }
     
 }
