@@ -1,35 +1,36 @@
-package calculator;
+package rft_calculator;
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-public class CalculatorView {
-	// A szövegmező deklarálása
+import java.util.logging.Level;
+import java.util.logging.Logger;
+public class CalculatorView extends JFrame{
+    // Mezők deklarálása
     private JTextField display;
-	// A szövegmező betűtípus, betűméret és betűvastagságának beállítása
     private static final Font BOLD_FONT = new Font(Font.MONOSPACED, Font.BOLD, 20);
-	
-     // Változók a számológép állapotához:
-    private boolean startNumber = true;                         // számot várunk el, nem pedig műveletet
-    private String prevOperation = "=";                         // előző művelet
-    private Motor engine = new Motor();                          // a motor referencia-változója
-	
-	//Az osztály konstruktora
+
+    // Variables for calculator's state
+    private boolean startNumber = true;                         // expecting number, not operation
+    private String prevOperation = "=";                         // previous operation
+    private Motor engine = new Motor();   // Reference to CalculatorEngine
+
     public CalculatorView(){
-        // Ablak beállítások (windows)
+        // Window settings
         Dimension size = new Dimension(320, 300);
         setPreferredSize(size);
         setResizable(false);
-		
-		// Megjelenítési mező beállítások
+
+        // Display field
         display = new JTextField("0", 18);
         display.setFont(BOLD_FONT);
         display.setHorizontalAlignment(JTextField.RIGHT);
-		
-		// 1. operációs panel
+
+        // Operations panel 1
         ActionListener operationListener = new OperationListener();
         JPanel operationPanel1 = new JPanel();
-		//Műveleti jelek és hozzá gombok adása
         String[] operationPanelNames1 = new String[]{"+", "-", "*", "/"};
         operationPanel1.setLayout(new GridLayout(2, 2, 2, 2));
         for (String anOperationPanelNames1 : operationPanelNames1) {
@@ -37,24 +38,22 @@ public class CalculatorView {
             operationPanel1.add(b);
             b.addActionListener(operationListener);
         }
-		
-		 // 2. operációs panel
+
+        // Operations panel 2
         JPanel operationPanel2 = new JPanel();
         operationPanel2.setLayout(new GridLayout(1, 1, 2, 2));
-		//Törlés gomb hozzáadása az operációs panelhez
-		JButton clearButton = new JButton("C");
+        JButton clearButton = new JButton("C");
         clearButton.addActionListener(new ClearKeyListener());
         operationPanel2.add(clearButton);
-		// Egyenlőségjel gomb hozzáadása az operációs panelhez
-		JButton equalButton = new JButton("=");
+        JButton equalButton = new JButton("=");
         equalButton.addActionListener(operationListener);
         operationPanel2.add(equalButton);
-		
-		// Gomb panel 
+
+
+        // Buttons panel
         JPanel buttonPanel = new JPanel();
         ActionListener numberListener = new NumberKeyListener();
-		//Feltöltés a számjegyeket reprezentáló gombokkal
-		String[] buttonPanelNames = new String[]{"7", "8", "9", "4", "5", "6", "1", "2", "3", " ", "0", " "};
+        String[] buttonPanelNames = new String[]{"7", "8", "9", "4", "5", "6", "1", "2", "3", " ", "0", " "};
         buttonPanel.setLayout(new GridLayout(4, 3, 2, 2));
         for (String buttonPanelName : buttonPanelNames) {
             JButton b = new JButton(buttonPanelName);
@@ -64,34 +63,38 @@ public class CalculatorView {
             b.addActionListener(numberListener);
             buttonPanel.add(b);
         }
-		
-		// Main panel és elrendezése
+
+        // Main panel
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BorderLayout());
         mainPanel.add(display, BorderLayout.NORTH);
         mainPanel.add(operationPanel1, BorderLayout.EAST);
         mainPanel.add(operationPanel2, BorderLayout.SOUTH);
         mainPanel.add(buttonPanel, BorderLayout.CENTER);
-		
-		// Az ablak felépítése
+
+        // Window build
         setContentPane(mainPanel);
         pack();
         setVisible(true);
-		
-		// Törlés (C) gomb megnyomására mi történjen a képernyőn
-		private void actionClear() {
+    }
+    
+    private void actionClear() throws Exception{
         startNumber = true;
         display.setText("0");
         prevOperation = "=";
-        engine.equal("0");
-		}
-		
-		// Osztály a különböző műveleti eseményekhez
-		class OperationListener implements ActionListener {
-			 @Override
-        public void actionPerformed(ActionEvent e) {
+        engine.egyenlo("0");
+    }
+    
+    class OperationListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e){
             if (startNumber) {
-                actionClear();
+                try { //összeállítói kiegészítés
+                    actionClear();
+                } catch (Exception ex) {
+                    Logger.getLogger(CalculatorView.class.getName()).log(Level.SEVERE, null, ex);
+                }
                 display.setText("ERROR - wrong operation");
             } else {
                 startNumber = true;
@@ -99,53 +102,61 @@ public class CalculatorView {
                     String displayText = display.getText();
                     switch (prevOperation) {
                         case "=":
-                            engine.equal(displayText);
+                            engine.egyenlo(displayText);
                             break;
                         case "+":
-                            engine.add(displayText);
+                            engine.osszeadas(displayText);
                             break;
                         case "-":
-                            engine.subtract(displayText);
+                            engine.kivonas(displayText);
                             break;
                         case "/":
-                            engine.divide(displayText);
+                            engine.osztas(displayText);
                             break;
                         case "*":
-                            engine.multiply(displayText);
+                            engine.szorzas(displayText);
                             break;
                     }
-                    display.setText("" + engine.getTotalString());
+                    display.setText("" + engine.eredmeny_String());
                 } catch (NumberFormatException ex) {
-                    actionClear();
+                    try {   //összeállítói kiegészítés
+                        actionClear();
+                    } catch (Exception ex1) {
+                        Logger.getLogger(CalculatorView.class.getName()).log(Level.SEVERE, null, ex1);
+                    }
+                } catch (Exception ex) {
+                    Logger.getLogger(CalculatorView.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 prevOperation = e.getActionCommand();
             }
         }
     }
     
-	//Osztály a számgomb eseményekhez
-		class NumberKeyListener implements ActionListener {
-			 @Override
-			public void actionPerformed(ActionEvent e) {
+    class NumberKeyListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
             String digit = e.getActionCommand();
-				if (startNumber) {
+            if (startNumber) {
                 display.setText(digit);
                 startNumber = false;
-				}else {
+            } else {
                 display.setText(display.getText() + digit);
-				}
-			
-			}
-		}
-		
-		//Osztály a törlés eseményhez
-		class ClearKeyListener implements ActionListener {
-			 Override
-			public void actionPerformed(ActionEvent e) {
-            actionClear();
-			}
-		}
-    
+            }
+        }
     }
-    
+
+    class ClearKeyListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e){
+            try { //összeállítói kiegészítés
+                actionClear();
+            } catch (Exception ex) {
+                Logger.getLogger(CalculatorView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+
+
 }
