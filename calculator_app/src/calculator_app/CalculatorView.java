@@ -10,9 +10,14 @@ public class CalculatorView {
 	// A szövegmező betűtípus, betűméret és betűvastagságának beállítása
     private static final Font BOLD_FONT = new Font(Font.MONOSPACED, Font.BOLD, 20);
 	
-	   // Változók a számológép állapotához:
+     // Változók a számológép állapotához:
     private boolean startNumber = true;                         // számot várunk el, nem pedig műveletet
     private String prevOperation = "=";                         // előző művelet
-    private CalculatorEngine engine = new CalculatorEngine();   // a CalculatorEngine referencia-változója
+    private Motor engine = new Motor();                          // a motor referencia-változója
+	
+	//Az osztály konstruktora
+    public CalculatorView(){
+        
+    }
     
 }
