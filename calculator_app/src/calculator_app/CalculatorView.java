@@ -21,6 +21,11 @@ public class CalculatorView {
         Dimension size = new Dimension(320, 300);
         setPreferredSize(size);
         setResizable(false);
+		
+		// Megjelenítési mező beállítások
+        display = new JTextField("0", 18);
+        display.setFont(BOLD_FONT);
+        display.setHorizontalAlignment(JTextField.RIGHT);
     }
     
 }
