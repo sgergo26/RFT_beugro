@@ -64,6 +64,14 @@ public class CalculatorView {
             b.addActionListener(numberListener);
             buttonPanel.add(b);
         }
+		
+		// Main panel és elrendezése
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new BorderLayout());
+        mainPanel.add(display, BorderLayout.NORTH);
+        mainPanel.add(operationPanel1, BorderLayout.EAST);
+        mainPanel.add(operationPanel2, BorderLayout.SOUTH);
+        mainPanel.add(buttonPanel, BorderLayout.CENTER);
     }
     
 }
