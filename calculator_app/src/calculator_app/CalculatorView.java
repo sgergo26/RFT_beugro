@@ -77,6 +77,14 @@ public class CalculatorView {
         setContentPane(mainPanel);
         pack();
         setVisible(true);
+		
+		// Törlés (C) gomb megnyomására mi történjen a képernyőn
+		private void actionClear() {
+        startNumber = true;
+        display.setText("0");
+        prevOperation = "=";
+        engine.equal("0");
+    }
     }
     
 }
