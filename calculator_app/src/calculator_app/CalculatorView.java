@@ -49,6 +49,21 @@ public class CalculatorView {
 		JButton equalButton = new JButton("=");
         equalButton.addActionListener(operationListener);
         operationPanel2.add(equalButton);
+		
+		// Gomb panel 
+        JPanel buttonPanel = new JPanel();
+        ActionListener numberListener = new NumberKeyListener();
+		//Feltöltés a számjegyeket reprezentáló gombokkal
+		String[] buttonPanelNames = new String[]{"7", "8", "9", "4", "5", "6", "1", "2", "3", " ", "0", " "};
+        buttonPanel.setLayout(new GridLayout(4, 3, 2, 2));
+        for (String buttonPanelName : buttonPanelNames) {
+            JButton b = new JButton(buttonPanelName);
+            if (buttonPanelName.equals(" ")) {
+                b.setEnabled(false);
+            }
+            b.addActionListener(numberListener);
+            buttonPanel.add(b);
+        }
     }
     
 }
