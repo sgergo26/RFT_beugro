@@ -38,6 +38,10 @@ public class CalculatorView {
             operationPanel1.add(b);
             b.addActionListener(operationListener);
         }
+		
+		 // 2. operációs panel
+        JPanel operationPanel2 = new JPanel();
+        operationPanel2.setLayout(new GridLayout(1, 1, 2, 2));
     }
     
 }
