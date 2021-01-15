@@ -26,6 +26,11 @@ public class CalculatorView {
         display = new JTextField("0", 18);
         display.setFont(BOLD_FONT);
         display.setHorizontalAlignment(JTextField.RIGHT);
+		
+		// 1. operációs panel
+        ActionListener operationListener = new OperationListener();
+        JPanel operationPanel1 = new JPanel();
+		
     }
     
 }
