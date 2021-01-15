@@ -84,7 +84,12 @@ public class CalculatorView {
         display.setText("0");
         prevOperation = "=";
         engine.equal("0");
-    }
+		}
+		
+		// Osztály a különböző műveleti eseményekhez
+		class OperationListener implements ActionListener {
+		}
+    
     }
     
 }
