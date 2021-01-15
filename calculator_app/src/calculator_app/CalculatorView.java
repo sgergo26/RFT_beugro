@@ -42,6 +42,10 @@ public class CalculatorView {
 		 // 2. operációs panel
         JPanel operationPanel2 = new JPanel();
         operationPanel2.setLayout(new GridLayout(1, 1, 2, 2));
+		//Törlés gomb hozzáadása az operációs panelhez
+		JButton clearButton = new JButton("C");
+        clearButton.addActionListener(new ClearKeyListener());
+        operationPanel2.add(clearButton);
     }
     
 }
