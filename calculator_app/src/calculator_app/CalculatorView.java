@@ -88,14 +88,62 @@ public class CalculatorView {
 		
 		// Osztály a különböző műveleti eseményekhez
 		class OperationListener implements ActionListener {
-		}
-		
-		//Osztály a számgomb eseményekhez
+			 @Override
+        public void actionPerformed(ActionEvent e) {
+            if (startNumber) {
+                actionClear();
+                display.setText("ERROR - wrong operation");
+            } else {
+                startNumber = true;
+                try {
+                    String displayText = display.getText();
+                    switch (prevOperation) {
+                        case "=":
+                            engine.equal(displayText);
+                            break;
+                        case "+":
+                            engine.add(displayText);
+                            break;
+                        case "-":
+                            engine.subtract(displayText);
+                            break;
+                        case "/":
+                            engine.divide(displayText);
+                            break;
+                        case "*":
+                            engine.multiply(displayText);
+                            break;
+                    }
+                    display.setText("" + engine.getTotalString());
+                } catch (NumberFormatException ex) {
+                    actionClear();
+                }
+                prevOperation = e.getActionCommand();
+            }
+        }
+    }
+    
+	//Osztály a számgomb eseményekhez
 		class NumberKeyListener implements ActionListener {
+			 @Override
+			public void actionPerformed(ActionEvent e) {
+            String digit = e.getActionCommand();
+				if (startNumber) {
+                display.setText(digit);
+                startNumber = false;
+				}else {
+                display.setText(display.getText() + digit);
+				}
+			
+			}
 		}
 		
 		//Osztály a törlés eseményhez
 		class ClearKeyListener implements ActionListener {
+			 Override
+			public void actionPerformed(ActionEvent e) {
+            actionClear();
+			}
 		}
     
     }
