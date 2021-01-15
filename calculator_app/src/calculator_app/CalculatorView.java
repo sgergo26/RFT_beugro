@@ -17,7 +17,10 @@ public class CalculatorView {
 	
 	//Az osztály konstruktora
     public CalculatorView(){
-        
+        // Ablak beállítások (windows)
+        Dimension size = new Dimension(320, 300);
+        setPreferredSize(size);
+        setResizable(false);
     }
     
 }
