@@ -1,7 +1,8 @@
-package calculator_app;
+package rft_calculator;
+
 
 public class Motor {
-    /*
+     /*
     Az akutális értéket szeretnénk, ha nem tudnák manipulálni, ezért privát.
     Hogy a érték módosítása során se férjenek hozzá kívülről, privát metódusokkal kell módosítani az értéket.
     A privát metódusokban maradékos osztással (%) el tudjuk dönteni, hogy integer vagy double típusban kell visszaadni az értéket.
@@ -61,6 +62,10 @@ public class Motor {
                 ? Integer.toString((int) aktual_ertek)
                 : String.valueOf(aktual_ertek);
     }
+   
+   public void egyenlo(String szam) throws Exception {   //összeállítói kiegészítés
+        aktual_ertek = Double.parseDouble(szam);
+   }
    
     public void osszeadas(String szam) throws Exception {
         doubleConvert(szam, Operator.OSSZEADAS);
