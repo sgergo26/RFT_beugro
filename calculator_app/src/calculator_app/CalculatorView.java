@@ -89,6 +89,9 @@ public class CalculatorView {
 		// Osztály a különböző műveleti eseményekhez
 		class OperationListener implements ActionListener {
 		}
+		
+		//Osztály a számgomb esemányekhez
+		class NumberKeyListener implements ActionListener {
     
     }
     
