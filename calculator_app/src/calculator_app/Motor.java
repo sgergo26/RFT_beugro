@@ -12,7 +12,7 @@ public class Motor {
     A publikus metódusokkat kell tesztelni.
     */
     
-     private double aktual_ertek;
+     double aktual_ertek;
      
      private void p_Osszead (double szam){
        aktual_ertek += szam % 1.0 == 0 ? (int) szam : szam;
@@ -48,11 +48,11 @@ public class Motor {
                 p_Oszt(dblSzam);
                 break;
             default:
-                throw new AssertionError(operator.name());
+                break;
         }
     }
     
-    /*
+   /* 
    A View felületen a gombok és az eventek hatására String típusú változókat kapunk.
    Ezért, hogy az eredményt meg tudjuk jeleníteni a View felületen az aktual_ertek változót át kell alakítani String típusúvá.
    */
