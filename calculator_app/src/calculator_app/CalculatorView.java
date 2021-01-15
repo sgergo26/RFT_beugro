@@ -46,6 +46,10 @@ public class CalculatorView {
 		JButton clearButton = new JButton("C");
         clearButton.addActionListener(new ClearKeyListener());
         operationPanel2.add(clearButton);
+		// Egyenlőségjel gomb hozzáadása az operációs panelhez
+		JButton equalButton = new JButton("=");
+        equalButton.addActionListener(operationListener);
+        operationPanel2.add(equalButton);
     }
     
 }
