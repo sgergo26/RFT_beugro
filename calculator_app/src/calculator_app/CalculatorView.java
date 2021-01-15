@@ -72,6 +72,11 @@ public class CalculatorView {
         mainPanel.add(operationPanel1, BorderLayout.EAST);
         mainPanel.add(operationPanel2, BorderLayout.SOUTH);
         mainPanel.add(buttonPanel, BorderLayout.CENTER);
+		
+		// Az ablak felépítése
+        setContentPane(mainPanel);
+        pack();
+        setVisible(true);
     }
     
 }
