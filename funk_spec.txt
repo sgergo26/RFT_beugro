@@ -26,6 +26,12 @@ K1		Felület				1.0			Üdvözlőfelület, ami a felhasználónak bemutatja rövi
 									    Számológépfelület, ahol a matematikai műveletek elvégezhetők.
 											-Kijelző az operáció végeredményéhez
 											-Gombok az operáció megvalósításához
+										Menupontok megjelenítése :
+										-Kilépés
+										-Opciók
+										Ahol, fejlesztés szüksége esetén lehetséges funkciók megjelenítít
+										-Help:About
+										Termék leírás kérése esetén alkalmazható
 										Rendelkezik a 3 alapértelmezett gombbal a jobb felső sarkában:
 											-Kilépés 
 											-Nagyítás
@@ -48,6 +54,9 @@ K4 		Funkciógombok 		1.0			Megnyomásra elvégzi az igényelt műveletet. Két 
 											-Kivon egymásból: - jelű gomb
 											-Összeszoroz: * jelű gomb
 											-Eloszt egymással: / jelű gomb
+											-Szinusz kiszámítása : "sin" gomb
+											-Koszinusz kiszámolása: "cos" gomb
+											-Logaritmus kiszámolása: "log" gomb
 										C gomb megnyomására alapállapotba hozza a kijelzőt.
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -99,6 +108,9 @@ K4		Funkciógombok				Az alapműveletek reprezentálására létrehozott panel t
 									/ osztás
 									+ összeadás
 									- kivonás
+									sin szinusz számítás
+									cos koszinusz számítás
+									log logaritmus számítás
 									Panel a művelet elvégzését, törlését kiváltó gomboknak:
 									= egyenlő
 									C törlés (Clear)
