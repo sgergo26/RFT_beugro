@@ -2,3 +2,48 @@ Karbantartási terv:
 A számológép nagy karbantartást nem igényel
 Fejlesztések felmerülése esetében a számológépet folyamatosan lehet bővíteni új funkciókkal és elemekkel 
 amik kielégitik majd az igényeket
+
+
+Elvárt eredmény:
+
+Egy olyan működő képes számolgép létrehozása az elvárt időkereten belül ami, 
+ingyenes és egyszerűen használható,
+átlátható program amin megjelennek a bevitt számok,elvégzi az alapműveleteket és
+kielégíti az mentorok vizuális igényeit is.
+
+Használt Szoftverek:
+
+	-NetBeans IDE
+	-Java SE
+
+A megvalósítandó rendszer kiválasztásának szempontjai:
+
+A Java megbízható ,elterjedt a programozók körében a nagyvállalatok nagyobb százaléke is ezt használja
+illetve sok területen használható.
+Sok energiát és idő megtakarítható vele mivel gyorsan és egyszerűen megy az csoportmunka ugyanabban a fejlesztési környezetben.
+Különböző eszközök és funkciók segítenek az erőforrások elrendezésében, a hibák elkerülésében.
+A Java-hoz több IDE-t (integrált fejlesztői környezetet) és kiegészítő eszközt alakítottak ki, amelyek jelentősen megkönnyítik a programozást.
+A Netbeans A Java nyelvén alapul ezért ez egy megfelelő szoftvernek mellé, ezenkívűl azt is figyelmbe vettük hogy Swing rendszeren ,ami lehető teszi 
+hogy, asztali alkalmazásokat fejlesszünk és különféle platformokon is futtatható mint Windows,Mac Os vagy Linux.
+Egyik fő szempontunk hogy a Java is és a NetBeans is ingyenes letölthető és telepíthető így a felmerükő költséget miatt nem kell agggódnunk és
+megtakarítunk azzal hogy ezeket használjuk.
+
+
+ 
+--------------------------------------------------------------------------------------------
+Szükséges metódusok felvázolása:
+Szám gombok megjelenítése
+Műveletek végzése:
+Összeadás (+) 
+Kivonás   (-)
+Osztás    (/)
+Szorzás   (*)
+Törlés    (C)
+---------------------------------------------------------------------------------------
+
+
+
+Fogalomtár
+
+    -Integrált fejlesztői környezet(IDE)          -egy olyan szoftveralkalmazás,amely átfogó létesítményeket 
+	                                               biztosít a számítógépes programozók számára a szoftverfejlesztéshez
