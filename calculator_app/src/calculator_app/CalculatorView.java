@@ -1,13 +1,15 @@
-package rft_calculator;
+package javaapplication1;
 
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 public class CalculatorView extends JFrame{
+    
     // Mezők deklarálása
     private JTextField display;
     private static final Font BOLD_FONT = new Font(Font.MONOSPACED, Font.BOLD, 20);
@@ -16,28 +18,36 @@ public class CalculatorView extends JFrame{
     private boolean startNumber = true;                         // expecting number, not operation
     private String prevOperation = "=";                         // previous operation
     private Motor engine = new Motor();   // Reference to CalculatorEngine
+    
 
     public CalculatorView(){
+        
+        
         // Window settings
         Dimension size = new Dimension(320, 300);
         setPreferredSize(size);
         setResizable(false);
-
+        
+        
+        
+        
         // Display field
         display = new JTextField("0", 18);
         display.setFont(BOLD_FONT);
         display.setHorizontalAlignment(JTextField.RIGHT);
+        
 
         // Operations panel 1
         ActionListener operationListener = new OperationListener();
         JPanel operationPanel1 = new JPanel();
-        String[] operationPanelNames1 = new String[]{"+", "-", "*", "/"};
-        operationPanel1.setLayout(new GridLayout(2, 2, 2, 2));
+        String[] operationPanelNames1 = new String[]{"+", "-", "*", "/","sin","cos","log"};
+        operationPanel1.setLayout(new GridLayout(4, 4, 4, 4));
         for (String anOperationPanelNames1 : operationPanelNames1) {
             JButton b = new JButton(anOperationPanelNames1);
             operationPanel1.add(b);
             b.addActionListener(operationListener);
         }
+        
 
         // Operations panel 2
         JPanel operationPanel2 = new JPanel();
@@ -63,6 +73,9 @@ public class CalculatorView extends JFrame{
             b.addActionListener(numberListener);
             buttonPanel.add(b);
         }
+        
+
+
 
         // Main panel
         JPanel mainPanel = new JPanel();
@@ -76,7 +89,11 @@ public class CalculatorView extends JFrame{
         setContentPane(mainPanel);
         pack();
         setVisible(true);
+        
+        
+        
     }
+    
     
     private void actionClear() throws Exception{
         startNumber = true;
@@ -84,11 +101,14 @@ public class CalculatorView extends JFrame{
         prevOperation = "=";
         engine.egyenlo("0");
     }
-    
+   
+   
+
     class OperationListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e){
+            String displayText = display.getText();
             if (startNumber) {
                 try { //összeállítói kiegészítés
                     actionClear();
@@ -96,10 +116,28 @@ public class CalculatorView extends JFrame{
                     Logger.getLogger(CalculatorView.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 display.setText("ERROR - wrong operation");
-            } else {
+            }else                                              // Sin,cos,log műveletek hozzáadása
+                if(e.getActionCommand().equals("sin"))
+            {
+                display.setText("" + Math.sin(Double.valueOf(displayText).doubleValue()));
+                
+            }else
+            if (e.getActionCommand().equals("cos"))
+            {
+                display.setText("" + Math.cos(Double.valueOf(displayText).doubleValue()));
+                
+            }
+            else
+            if (e.getActionCommand().equals("log"))
+            {
+                display.setText("" + Math.log(Double.valueOf(displayText).doubleValue()));
+                
+            }
+            
+            else{
                 startNumber = true;
                 try {
-                    String displayText = display.getText();
+                    
                     switch (prevOperation) {
                         case "=":
                             engine.egyenlo(displayText);
@@ -116,6 +154,9 @@ public class CalculatorView extends JFrame{
                         case "*":
                             engine.szorzas(displayText);
                             break;
+                        
+                        
+                            
                     }
                     display.setText("" + engine.eredmeny_String());
                 } catch (NumberFormatException ex) {
@@ -132,6 +173,7 @@ public class CalculatorView extends JFrame{
         }
     }
     
+    
     class NumberKeyListener implements ActionListener {
 
         @Override
@@ -145,6 +187,7 @@ public class CalculatorView extends JFrame{
             }
         }
     }
+    
 
     class ClearKeyListener implements ActionListener {
 
@@ -157,6 +200,14 @@ public class CalculatorView extends JFrame{
             }
         }
     }
+   
+        
+        
+    
+
+    
+    
+    
 
 
 }
