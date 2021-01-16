@@ -1,0 +1,115 @@
+FUNKCIONÁLIS SPECIFIKÁCIÓ
+1. Áttekintés
+-------------
+A projektünk alatt egy  egyszerűen használható, számológép alkalmazást vagyunk hivatottak elkészíteni, mely később más funkciókkal is bővíthető lesz.
+Természetesen nemcsak egy adott felülettel lesz kompatibilis a számológép, célunk, hogy minél több rendszerbe be lehessen integrálni. 
+Ezt a  platformfüggetlenséget a Java biztosítja, ezáltal  számos Java alapú komplex rendszerekbe is beépíthetű alkalmazás valósítható meg.
+Az első verzióban a fókusz az alapműveletek elvégzésének képességén van és nem egy, 
+akár bonyolultabb matematikai képletek megoldására is képes számológép kivitelezésében.
+Tekintettel arra, hogy a megrendelők követelményei változhatnak, megvalósításában cégünk gondoskodik arról, hogy
+a jövőbeli plusz műveletbővítések gördülékenyen megoldhatóak legyenek.
+
+2. Jelenlegi helyzet
+--------------------
+A megrendelőnk szeretné, hogy az általa fejlesztett/használt szoftvertermék, vagy egy tetszőleges informatikai rendszer rendelkezzen beépített számológép funkcióval.
+Egy olyan számológépre van szüksége, ami képes az alapműveletek elvégzésére és akár később bővíthető is. 
+Ezen kívül felhasználóbarát felülettel rendelkezik, kezelése nem bonyolult, lehetőleg Java nyelven megvalósítva.
+
+3. Követelménylista
+
+ID 		Név 				Verzió 		Kifejtés
+--------------------------------------------------------------------------------------------------------------------------------------
+K1		Felület				1.0			Üdvözlőfelület, ami a felhasználónak bemutatja röviden az alkalmazást.
+											-Üdvözlőüzenet
+											-Kiírja a verziószámot
+											-Kiírja a súgót
+									    Számológépfelület, ahol a matematikai műveletek elvégezhetők.
+											-Kijelző az operáció végeredményéhez
+											-Gombok az operáció megvalósításához
+										Rendelkezik a 3 alapértelmezett gombbal a jobb felső sarkában:
+											-Kilépés 
+											-Nagyítás
+											-Letétel a számítógép Tálcájára
+---------------------------------------------------------------------------------------------------------------------------------------
+K2		Kijelző				1.0			Megjeleníti:
+											-Az aktuálisan begépelt szám(sorozat)ot
+											-A számokkal elvégzett műveletek eredményét
+											-Hibaüzenettel jelez a felhasználónak, ha érvénytelen műveletet gépelt be
+											-0-át ír ki:
+												a 'C' gomb megnyomására alapállapotba kerül a kijelző
+												a számológép megnyitását követően alapértelmezetten
+----------------------------------------------------------------------------------------------------------------------------------------
+K3		Numerikus gombsor	1.0			Megnyomásra kiírja a gomb felületén jelzett számot egyszer.
+										Egymás utáni megnyomásra ugyanazt a számot annyiszor írja ki, ahányszor a felhasználó lenyomta.
+										Tartalma: tizes számrendszer-beli számok (0,1,2,3,4,5,6,7,8,9)
+----------------------------------------------------------------------------------------------------------------------------------------
+K4 		Funkciógombok 		1.0			Megnyomásra elvégzi az igényelt műveletet. Két számot:
+											-Összead: + jelű gomb 
+											-Kivon egymásból: - jelű gomb
+											-Összeszoroz: * jelű gomb
+											-Eloszt egymással: / jelű gomb
+										C gomb megnyomására alapállapotba hozza a kijelzőt.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+4. Jelenlegi üzleti folyamatok modellje
+--------------------------------------
+A piaci versenyben az idő mindig egy jelentős fegyvernek számított. Az nyer, aki a változásokra minél gyorsabban, minél jobb döntéssel reagál. 
+Versenystratégiai szempontból a várakozásokhoz igazított jelenbeni döntés jobb, mint a változásokra igazodó reagálás.
+A jövőbeni várakozások azt mutatják, még nagyobb technológiai változások következnek be, a fogyasztók igényei egyre nőnek, mindent azonnal akarnak.
+Egy számológép alapvető dolognak számító tárgy a hétköznapokban is, így  ezáltal számos rendszer is igényt tarthat rá.
+Ezen eszköz kódok által való megvalósítása nem túl bonyolult, de erre is időt kell szánni, erre is teszteket kell írni, 
+hogy helyes működéséről a megrendelő meggyőződjön.
+Például  egy szoftver megrendelője szinte biztos, hogy  2 szoftverfejlesztő cég ajánlata közül figyelembe veszi az elkészülő projekt időigényét is. 
+Azt fogja választani, aki rövidebb idő  elkészíti azt.
+Cégünk megrendelője azon túl, hogy versenytársaival csatát vív, az időtényezővel is folyamatosan harcol. 
+Megrendelőnk tudja, hogy az idő pénz, ezért szeretné, ha az olyan alapvető eszközök elkészítésére, mint pl. egy számológép, a saját projektje során már ne kelljen időt pazarolni.
+A szoftvercégek életében kulcsfontosságú a szoftver gyorsabb és jobb minőségű elkészítése.
+A szoftverkomponensek újrafelhasználásával gyorsabban lehet szoftvert fejleszteni.
+Ezek a komponensek lehetnek saját fejlesztésűek vagy megvásároltak.
+Komponenst vásárolni nagy kockázat, mert ha hiba van benne, azt a megrendelő cég forrás híján nem tudja javítani, vagy ha igen, annak is ára van. 
+Ezért cégünk ilyen komponensek gyártásánál nagyon alaposan teszteli termékeinket, illetve gyors hibajavítást vállal.
+
+5. Igényelt üzleti folyamatok modellje
+--------------------------------------
+Mivel egy számológép működése általános, így egyfajta beépíthető elemként szolgál  minden olyan szoftver fejlesztésénél, ahova ilyen funkcióra igény van.
+A funkcionalitásának, felhasználáhatóságának általánossága indokolja, hogy ezt egy általános célú programnyelven valósítsuk meg, erre a Java nyelv szolgál.
+Egységesített fejlesztési és telepítési modellt kínál kifejezésteli, gazdag internetes alkalmazások (RIA) asztali számítógépen, böngészőn és mobilon történő kiépítéséhez.
+Azért, hogy segítsük megrendelőnket a piaci versenyben, megvalósítunk egy programot, ami számos Java alapú (akár vállalati) informatikai rendszerbe beilleszthető.
+Ezáltal elkészítésével vevőnk időt spórol meg saját cégénél, egy ilyen standard alkalmazás elkészítésére már nem kell időt szánnia.
+A megrendelő cégében dolgozó fejlesztők válláról is legördül ez a teher, összpontosíthatnak a szoftverfejlesztés többi részére.
+
+10. Funkció-követelmény megfeleltetés
+
+ID 		Követelmény megnevezése		Funkció
+-----------------------------------------------------------------------------------------------------------------------------------------------
+K1		Felület						Grafikus felhasználói felület (GUI)
+									A számológépbe belépés előtt egy üdvözlőfelület segíti a felhasználót a számológép használatának leírásával
+									Biztosítja a számológép megjelenítését
+									Java elemek: JFrame, JLabel
+									
+K2		Kijelző						Szövegmező, mely a beírt számokat és a műveletek eredményét arab számokkal megjeleníti, érvénytelen művelet esetén hibaüzenetet ír ki
+									Java elemek: JTextField
+									
+K3		Numerikus gombsor			A számok reprezentálására létrehozott panel területen  gombok csoportja:
+									0,1,2,3,4,5,6,7,8,9
+									Java elem: JPanel, JButton
+									
+K4		Funkciógombok				Az alapműveletek reprezentálására létrehozott panel területen gombok csoportja:
+									* szorzás
+									/ osztás
+									+ összeadás
+									- kivonás
+									Panel a művelet elvégzését, törlését kiváltó gomboknak:
+									= egyenlő
+									C törlés (Clear)
+									Java elem: JPanel, JButton
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+11. Fogalomszótár
+-----------------
+- GUI -- Graphic User Interface (Grafikus Felhasználói Felület), a számítógép és ember közti kapcsolatot megvalósító elemek összessége, melyek a monitor képernyőjén szöveges és rajzos elemek együtteseként jelennek meg
+- JLabel -- Szöveg- vagy kép megjelenítését teszi lehetővé
+- JFrame --  Alap-ablak, mely biztosítja a felületen található több komponens összekötését mint pl. a menüsor, gombok, szövegmezők 
+- JTextField -- Egy könnyűsúlyú komponens, mely lehetővé teszi egy egyszerű szövegsor szerkesztését
+- JPanel -- Komponensek egy csoportját tárolni képes konténer, a projekt esetében ez a funkciógombok csoportja
+- JButton -- Lehetővé teszi címkével ellátott gombok létrehozását, aminek megnyomására valamely esemény bekövetkezik, a projekt esetében ez a műveletek elvégzése, számok bevitele, vagy a képernyő alaphelyzetbe állítása
