@@ -2,10 +2,14 @@ package rft_calculator;
 
 import java.awt.*;
 import javax.swing.*;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 
 public class WelcomeWindow extends JFrame{
     public WelcomeWindow() {
+        
         // az ablak konfigurálása (méret, átméretezhetőség, stb)
         Dimension size = new Dimension(450,500);
         setPreferredSize(size);
@@ -16,7 +20,7 @@ public class WelcomeWindow extends JFrame{
         title.setFont(new Font("Dialog",Font.BOLD,18));
         
         //A verizószám megjelenítése
-        JLabel version = new JLabel("Ön jelenleg a v1.4 verziót használja");
+        JLabel version = new JLabel("Ön jelenleg a v1.5 verziót használja");
         version.setFont(new Font("Dialog",Font.PLAIN,12));
         
         //Rövid súgó
@@ -74,6 +78,35 @@ public class WelcomeWindow extends JFrame{
         authors.add(sg);
         authors.add(sgn);
         
+        //A program céja
+        JLabel rft = new JLabel();
+        rft.setText("<html><div style='text-align: center;'>"
+                + "A program A Rendszerfejlesztés Technológiája (NBT_IM715K3) <br>"
+                + "tárgy vizsgabeugrójaként készült."
+                + "</div></html>");
+        rft.setFont(new Font("Dialog",Font.BOLD,14));
+        rft.setForeground(java.awt.Color.red.darker());
+        
+        //Bezárásra szolgáló gomb
+        JButton close = new JButton("A súgó bezárása");
+        close.setBackground(java.awt.Color.red);
+        close.setForeground(java.awt.Color.white);
+        close.addActionListener(new CloseListener());
+        
+        //Az utolsó Build időpotnja
+        JPanel bp = new JPanel();
+        JLabel buildLabel = new JLabel("Az utolsó build odőpontja:");
+        buildLabel.setFont(new Font("Dialog",Font.PLAIN,12));
+        buildLabel.setForeground(java.awt.Color.lightGray);
+        bp.add(buildLabel);
+        
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");  
+        LocalDateTime now = LocalDateTime.now();  
+        String nOW = dtf.format(now);
+        JLabel buildDate = new JLabel();
+        buildDate.setText(nOW);
+        buildDate.setForeground(java.awt.Color.lightGray);
+        bp.add(buildDate);
         
         //az ablak vázát adó főpanel összeállítása.
         JPanel wp = new JPanel();
@@ -82,11 +115,21 @@ public class WelcomeWindow extends JFrame{
         wp.add(helppanel);
         wp.add(authorLabel);
         wp.add(authors);
+        wp.add(rft);
+        wp.add(close);
+        wp.add(bp);
         
         // az ablak megjelenítése
         setContentPane(wp);
         pack();
         setVisible(true);
-
+    }
+    
+    //Az ablak bezárását intéző eljárás
+    private class CloseListener implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            setVisible(false);
+        }
     }
 }
