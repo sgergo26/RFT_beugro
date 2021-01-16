@@ -11,7 +11,7 @@ public class WelcomeWindow extends JFrame{
     public WelcomeWindow() {
         
         // az ablak konfigurálása (méret, átméretezhetőség, stb)
-        Dimension size = new Dimension(450,500);
+        Dimension size = new Dimension(455,400);
         setPreferredSize(size);
         setResizable(false);
         
@@ -20,8 +20,9 @@ public class WelcomeWindow extends JFrame{
         title.setFont(new Font("Dialog",Font.BOLD,18));
         
         //A verizószám megjelenítése
-        JLabel version = new JLabel("Ön jelenleg a v1.5 verziót használja");
+        JLabel version = new JLabel("Ön jelenleg a v1.6 verziót használja");
         version.setFont(new Font("Dialog",Font.PLAIN,12));
+        version.setForeground(java.awt.Color.green.darker());
         
         //Rövid súgó
         JPanel helppanel = new JPanel();
@@ -122,6 +123,7 @@ public class WelcomeWindow extends JFrame{
         // az ablak megjelenítése
         setContentPane(wp);
         pack();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
     
