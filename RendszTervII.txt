@@ -1,15 +1,14 @@
 Karbantartási terv:
 A számológép nagy karbantartást nem igényel
-Fejlesztések felmerülése esetében a számológépet folyamatosan lehet bővíteni új funkciókkal és elemekkel 
-amik kielégitik majd az igényeket
+Fejlesztések felmerülése esetében a számológépet folyamatosan lehet bővíteni új funkciókkal 
+és elemekkel ami kielégíti az igényeket
 
 
 Elvárt eredmény:
 
-Egy olyan működő képes számolgép létrehozása az elvárt időkereten belül ami, 
-ingyenes és egyszerűen használható,
-átlátható program amin megjelennek a bevitt számok,elvégzi az alapműveleteket és
-kielégíti az mentorok vizuális igényeit is.
+Egy olyan működő képes számolgép létrehozása az elvárt időkereten belül ami, ingyenes és egyszerűen használható,
+átlátható program amin megjelennek a bevitt számok,elvégzi a megadott műveleteket és kielégíti az mentorok vizuális igényeit is.
+Legyenek menüpontjai is és jelenjen meg egy üdvözlő felület.
 
 Használt Szoftverek:
 
@@ -18,15 +17,18 @@ Használt Szoftverek:
 
 A megvalósítandó rendszer kiválasztásának szempontjai:
 
-A Java megbízható ,elterjedt a programozók körében a nagyvállalatok nagyobb százaléke is ezt használja
-illetve sok területen használható.
+A Java megbízható ,elterjedt a programozók körében a nagyvállalatok nagyobb százaléka is ezt használja ,illetve sok területen használható.
+A Java-hoz írt keretrendszerek többségében rendkívül hatalmasak, éppen ezért rengeteg bank, pénzintézet és multinacionális cég használja ezeket a nyelveket az üzleti szférában.
 Sok energiát és idő megtakarítható vele mivel gyorsan és egyszerűen megy az csoportmunka ugyanabban a fejlesztési környezetben.
 Különböző eszközök és funkciók segítenek az erőforrások elrendezésében, a hibák elkerülésében.
 A Java-hoz több IDE-t (integrált fejlesztői környezetet) és kiegészítő eszközt alakítottak ki, amelyek jelentősen megkönnyítik a programozást.
 A Netbeans A Java nyelvén alapul ezért ez egy megfelelő szoftvernek mellé, ezenkívűl azt is figyelmbe vettük hogy Swing rendszeren ,ami lehető teszi 
 hogy, asztali alkalmazásokat fejlesszünk és különféle platformokon is futtatható mint Windows,Mac Os vagy Linux.
+A Java ajánlott kezdő nyelvnek is mert egyszerű, logikus, jól felépített, és megtanulásával kifejezetten erős programozói alapokat lehet szerezni. 
+A Java segítségével könnyen megértheted és használhatod az objektumorientáltságot, aminek segítségével teljesen logikusan és életszerűen strukturálhatod az alkalmazásodat.
 Egyik fő szempontunk hogy a Java is és a NetBeans is ingyenes letölthető és telepíthető így a felmerükő költséget miatt nem kell agggódnunk és
 megtakarítunk azzal hogy ezeket használjuk.
+Mivel a Java és a NetBeans és elterjedt és népszerű ezért megakadás esetén lehetőségünk van interneten,fórumokon,oktatási segédanyagokat illetve segítséget találnunk.
 
 
  
