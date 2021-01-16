@@ -1,33 +1,41 @@
 A projekt célja:
 --------------------------------
-A projekt célja, hogy a Code and Business Kft. vezetősége által kinevezetett munkatársakat egy valós igényekre épülő, a vállalat kínálatában helytálló, saját téma és feladatnak megfelelő projekt megvalósításának keretein belül jobban megismerjék egymást, és el tudják dönteni, hogy ki milyen szerepre alkalmas a csoportmunka hatékony működéséhez.
+A projekt célja, hogy a Code and Business Kft. vezetősége által kinevezetett munkatársakat egy valós igényekre épülő,
+ a vállalat kínálatában helytálló, saját téma és feladatnak megfelelő projekt megvalósításának keretein belül jobban megismerjék egymást,
+ és el tudják dönteni, hogy ki milyen szerepre alkalmas a csoportmunka hatékony működéséhez.
 A projektlezárása után többségi szavazással fog eldőlni, hogy kit tartanak alkalmasnak csoportvezetőnek, azonban a vezetőség fogja jóváhagyni a mentorok véleménye alapján.
 A projekt határidejét a vezetőség tűzte ki célul, de a temáját és feladatát a csapattagok többségi döntése alapján született. 
 A határidőre egy kész programot kell a csapatnak elkészítenie, amit végül egy prezentációval kell a vezetőségnek bemutatniuk minden írásos dokumentációval együtt.
 
 A rendszer implementációja:
 --------------------------------
-A projekt megvalósítása java nyelven fog történni, mivel ezt a nyelvet a csoport minden tagja ismeri, illetve kiválóan támogatott és rengeteg rendszeralkönyvtár áll szolgálatára. 
+A projekt megvalósítása java nyelven fog történni, mivel ezt a nyelvet a csoport minden tagja ismeri,
+ illetve kiválóan támogatott és rengeteg rendszeralkönyvtár áll szolgálatára. 
 Ezen kívül platformfüggetlen, ami megfelelően beilleszkedik a vállalat termékei közé.
 Mivel általános célú, megfelel annak a kritériumnak is, hogy a csapat saját maga dönti el projektjük témáját.
 
 A projekt megvalósítása:
 --------------------------------
-Az számológ minél átláthatóbb, és könnyebb fejlesztése érdekében külön osztályokban valósítjuk meg a megjelenést és a logikai működését is, és ezáltal lehetőséget teremtünk, hogy párhuzamosan valósulhassanak meg a fejlesztések.
+Az számológ minél átláthatóbb, és könnyebb fejlesztése érdekében külön osztályokban valósítjuk meg a megjelenést és a logikai működését is,
+ és ezáltal lehetőséget teremtünk, hogy párhuzamosan valósulhassanak meg a fejlesztések.
 --------------------------------
 Operátor enum:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A projekt felépítésénél ügyelünk a számológép bővíthetőségére az igények figyelembevétele által. 
-Ezért a műveleti operátorokat egy előre definiált konstansokkal tudjuk biztosítani. Ez által meg tudjuk felelteni a funkcionális specifikációban lerögzített vevői igényeket, és könnyű bővíthetőséget jelent a fejlesztő számára.
+Ezért a műveleti operátorokat egy előre definiált konstansokkal tudjuk biztosítani. Ez által meg tudjuk felelteni 
+a funkcionális specifikációban lerögzített vevői igényeket, és könnyű bővíthetőséget jelent a fejlesztő számára.
 
 Motor osztály:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-A motor osztályban írjuk le a korábban előre definiált operátorok értelmezését és megvalósítását is. Magát a számológép akutális értékét privát változóban tároljuk, hogy az osztályban leírt privát műveleti operátorok kívül senki nem férhessen hozzá kívülről, és manipulálhassa meg a számológép működését.
+A motor osztályban írjuk le a korábban előre definiált operátorok értelmezését és megvalósítását is. Magát a számológép akutális értékét privát 
+változóban tároljuk, hogy az osztályban leírt privát műveleti operátorok kívül senki nem férhessen hozzá kívülről, és manipulálhassa meg a számológép működését.
 
 MotorTest:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Fontos az, hogy a számológép logikai működését ellenőrizzük, ezért az osztály teszteléséhez unittesztek segítségével tudjuk megvalósítani. Itt minden publikus metódus helyes működését ellenőrizzük.
+Fontos az, hogy a számológép logikai működését ellenőrizzük, ezért az osztály teszteléséhez unittesztek segítségével tudjuk megvalósítani. 
+Itt minden publikus metódus helyes működését ellenőrizzük.
 
 View osztály:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Ebben az osztályban írjuk le a számológép kinézetét, illetve a motor osztály publikus metódusai segítségével összekapcsoljuk, és ezáltal egy működőképes számológép lehet elkészíteni.
+Ebben az osztályban írjuk le a számológép kinézetét, illetve a motor osztály publikus metódusai segítségével összekapcsoljuk,
+ és ezáltal egy működőképes számológép lehet elkészíteni.
