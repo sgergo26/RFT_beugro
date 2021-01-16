@@ -1,0 +1,4 @@
+Karbantartási terv:
+A számológép nagy karbantartást nem igényel
+Fejlesztések felmerülése esetében a számológépet folyamatosan lehet bővíteni új funkciókkal és elemekkel 
+amik kielégitik majd az igényeket
