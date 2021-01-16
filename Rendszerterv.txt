@@ -7,6 +7,16 @@ A projektlezárása után többségi szavazással fog eldőlni, hogy kit tartana
 A projekt határidejét a vezetőség tűzte ki célul, de a temáját és feladatát a csapattagok többségi döntése alapján született. 
 A határidőre egy kész programot kell a csapatnak elkészítenie, amit végül egy prezentációval kell a vezetőségnek bemutatniuk minden írásos dokumentációval együtt.
 
+Feladatmegosztás:
+--------------------------------
+A COVID-19 miatt kitörő világjárvány miatt a vállalat átállt a home-office-ra, a munkatársak saját otthonaikban folytattják munkáikat. 
+Nem történt kivétel a projekt megvalósításával megbízott csapat sem, emiatt nem használnak közös irodát, illetve a vállalat szervereit is a céges laptopokon keresztül érhetik el.
+A csapatmunka és a projekt apróbb részekre történő megosztását egy online meeting keretein belül választják a ki maguknak, ezután pedig GitHub.com-on részletesebben leírták. 
+Ezen a felületen nagyon jól láthatóvá válik, hogy aktuálisan ki melyik feladattal foglalkozik, illetve melyik feladatot nem vállalta el eddig senki,
+és kinek sikerül megvalósítania azt. A vállalat által készített Discord szerveren a csapattagok csak egymást közötti kommunikációt biztosított a vezetőség,
+azonban a heti online meetingeken folyamatosan beszámolnak előrehaladásukról. Külön a csapattagok által egyeztetett időpontokban lehetőséget biztosítanak a jelentkező 
+konfliktusok feltárására és hogy erre valamilyen megoldás szülessen rá.
+
 A rendszer implementációja:
 --------------------------------
 A projekt megvalósítása java nyelven fog történni, mivel ezt a nyelvet a csoport minden tagja ismeri,
@@ -29,6 +39,7 @@ Motor osztály:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A motor osztályban írjuk le a korábban előre definiált operátorok értelmezését és megvalósítását is. Magát a számológép akutális értékét privát 
 változóban tároljuk, hogy az osztályban leírt privát műveleti operátorok kívül senki nem férhessen hozzá kívülről, és manipulálhassa meg a számológép működését.
+A privát és publikus metódusokat egy privát switch-case metódus segítségével tudjuk összekapcsolni, ezáltal pedig csak közvetett hozzáférést biztosítunk az osztályon kívül.
 
 MotorTest:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -37,5 +48,5 @@ Itt minden publikus metódus helyes működését ellenőrizzük.
 
 View osztály:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Ebben az osztályban írjuk le a számológép kinézetét, illetve a motor osztály publikus metódusai segítségével összekapcsoljuk,
- és ezáltal egy működőképes számológép lehet elkészíteni.
+Ebben az osztályban írjuk le a számológép kinézetét, definiáljuk a gombokat és az őket érő eseményeket amik tartalmazzák a motor osztály publikus metódushívásait. 
+Ennek segítségével összekötjük a számológép vizuális megjelenését a logikai működéssel és ezáltal egy működőképes számológép tudunk elkészíteni.
