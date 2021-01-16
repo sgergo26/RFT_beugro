@@ -87,6 +87,11 @@ Azért, hogy segítsük megrendelőnket a piaci versenyben, megvalósítunk egy 
 Ezáltal elkészítésével vevőnk időt spórol meg saját cégénél, egy ilyen standard alkalmazás elkészítésére már nem kell időt szánnia.
 A megrendelő cégében dolgozó fejlesztők válláról is legördül ez a teher, összpontosíthatnak a szoftverfejlesztés többi részére.
 
+6.Használati estek
+
+Minden felhasználó szabadon használhatja az összes funkciót a semmilyen korlátozás jelszó védelem nincs a számológép esetében mivel ez egy hétköznapi használatra szánt eszköz. A felhasználók hozzáférnek a számológép gombjaihoz illetve műveleteihez, amivel szabadon tudnak számolni, láthatják a menüpontokat, amin bezárhatják, a programot illetve megjelenik, nekik az üdvözlőfelület ahol kiírja a típus számot és megjeleníti a súgót.
+
+
 10. Funkció-követelmény megfeleltetés
 
 ID 		Követelmény megnevezése		Funkció
