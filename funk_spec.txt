@@ -89,14 +89,22 @@ A megrendelő cégében dolgozó fejlesztők válláról is legördül ez a tehe
 
 6.Használati estek
 
-Minden felhasználó szabadon használhatja az összes funkciót a semmilyen korlátozás jelszó védelem nincs a számológép esetében mivel ez egy hétköznapi használatra szánt eszköz. A felhasználók hozzáférnek a számológép gombjaihoz illetve műveleteihez, amivel szabadon tudnak számolni, láthatják a menüpontokat, amin bezárhatják, a programot illetve megjelenik, nekik az üdvözlőfelület ahol kiírja a típus számot és megjeleníti a súgót.
+Minden felhasználó szabadon használhatja az összes funkciót a semmilyen korlátozás jelszó védelem nincs a számológép esetében mivel ez egy hétköznapi használatra szánt eszköz.
+A felhasználók hozzáférnek a számológép gombjaihoz illetve műveleteihez, amivel szabadon tudnak számolni, láthatják a menüpontokat, amin bezárhatják, a programot illetve 
+megjelenik, nekik az üdvözlőfelület ahol kiírja a típus számot és megjeleníti a súgót.
 
 
 9.Forgatókönyv
 
-Képzeljük el, hogy a hogy egy iskola tanárai vagyunk és órára készülünk és be szeretnénk mutatni a diákoknak. Nem rég kezdtek el a programozásba bele tanulni és szeretnénk nekik mutatni egy
-Egyszerű, könnyen érthető példát hogy mit tudnak Java-ban leprogramozni.
-A választásunk egy egyszerű számológépre esik, mivel ezt úgy gondoljuk, hogy a diákok is könnyen megértenék. Az első lépések magának az ötletnek a felvázolása a diákok számára majd bele is lehet kezdeni a programozásba. Először is megjelentetjük, a képernyőt ahova a számok kiírásra kerülnek és a gombokat, amin a számok illetve műveletek lesznek. A gombok majd a műveletek elvégzése következik ,először az alapműveletek majd a nehezebbek műveletek majd  a törlő gomb illetve egyenlőség gombokat következnek .Mivel ez már jobban megerőltette a diákok agyát , ezért hogy feldobjuk, és kreatív dolgot csináljunk, egy üdvözlő felületet készítünk, amin megjelenítjük a verzió számot, súgót jelenít meg illetve kiírja a készítők nevét és saját kezűleg be írott üdvözlő üzenetet is lehet vele írni. Ezzel a diákok igen soka mindent tanultak az adott órán és egy olyan egyszerű kis számológépet készítettek, amit más órán is tudnak használni és elmondhatják, hogy ők készítették.
+Képzeljük el, hogy a hogy egy iskola tanárai vagyunk és órára készülünk és be szeretnénk mutatni a diákoknak.
+Nem rég kezdtek el a programozásba bele tanulni és szeretnénk nekik mutatni egy egyszerű, könnyen érthető példát amit le tudnak Java-ban programozni.
+A választásunk egy egyszerű számológépre esik, mivel ezt úgy gondoljuk, hogy a diákok is könnyen megértenék. Az első lépések magának az ötletnek a felvázolása a diákok számára
+majd bele is lehet kezdeni a programozásba. Először is megjelentetjük, a képernyőt ahova a számok kiírásra kerülnek és a gombokat,
+amin a számok illetve műveletek lesznek. A gombok majd a műveletek elvégzése következik ,először az alapműveletek majd a nehezebbek műveletek majd  a törlő gomb
+illetve egyenlőség gombokat következnek .Mivel ez már jobban megerőltette a diákok agyát , ezért hogy feldobjuk, és kreatív dolgot csináljunk,egy üdvözlő felületet 
+készítünk,amin megjelenítjük a verzió számot, súgót jelenít meg illetve kiírja a készítők nevét és saját kezűleg be írott üdvözlő üzenetet is lehet vele írni.
+Ezzel a diákok igen soka mindent tanultak az adott órán és egy olyan egyszerű kis számológépet készítettek, amit más órán is tudnak használni és elmondhatják, hogy ők 
+készítették.
 
 
 
