@@ -1,8 +1,12 @@
 A projekt célja:
 --------------------------------
-A projekt célja, hogy a Code and Business Kft. vezetősége által kinevezetett munkatársakat egy valós igényekre épülő,
- a vállalat kínálatában helytálló, saját téma és feladatnak megfelelő projekt megvalósításának keretein belül jobban megismerjék egymást,
- és el tudják dönteni, hogy ki milyen szerepre alkalmas a csoportmunka hatékony működéséhez.
+A projekt célja, hogy a Code and Business Kft. vezetősége által kinevezetett új, fiatal munkatársakat egy valós igényekre épülő,
+a vállalat kínálatában helytálló, saját téma és feladatnak megfelelő projekt megvalósításának keretein belül jobban megismerjék egymást,
+és el tudják dönteni, hogy ki milyen szerepre alkalmas a csoportmunka hatékony működéséhez.
+Emellett fontos kiemelni azt is, hogy a projekt másodlagos célja, hogy a csapattagok megismerjék a projekt dokumentumainak formai követelményeit, 
+és az ehhez tartozó tartalmat is részletekbe menően meg tudják határozni. Fontos kiemelendő tény, 
+hogy a csapattagok eltérő képzettségei miatt mentorok segítik egyéni képességeik
+fejlesztésében, illetve a mentorok aprólépkosan ismertetni tudják a vállalatnál használt szoftvereket és technikákat.
 A projektlezárása után többségi szavazással fog eldőlni, hogy kit tartanak alkalmasnak csoportvezetőnek, azonban a vezetőség fogja jóváhagyni a mentorok véleménye alapján.
 A projekt határidejét a vezetőség tűzte ki célul, de a temáját és feladatát a csapattagok többségi döntése alapján született. 
 A határidőre egy kész programot kell a csapatnak elkészítenie, amit végül egy prezentációval kell a vezetőségnek bemutatniuk minden írásos dokumentációval együtt.
@@ -10,43 +14,61 @@ A határidőre egy kész programot kell a csapatnak elkészítenie, amit végül
 Feladatmegosztás:
 --------------------------------
 A COVID-19 miatt kitörő világjárvány miatt a vállalat átállt a home-office-ra, a munkatársak saját otthonaikban folytattják munkáikat. 
-Nem történt kivétel a projekt megvalósításával megbízott csapat sem, emiatt nem használnak közös irodát, illetve a vállalat szervereit is a céges laptopokon keresztül érhetik el.
+Nem történt kivétel a projekt megvalósításával megbízott csapat sem, emiatt nem használnak közös irodát, 
+illetve a vállalat szervereit is a céges laptopokon keresztül érhetik el.
 A csapatmunka és a projekt apróbb részekre történő megosztását egy online meeting keretein belül választják a ki maguknak, ezután pedig GitHub.com-on részletesebben leírták. 
 Ezen a felületen nagyon jól láthatóvá válik, hogy aktuálisan ki melyik feladattal foglalkozik, illetve melyik feladatot nem vállalta el eddig senki,
 és kinek sikerül megvalósítania azt. A vállalat által készített Discord szerveren a csapattagok csak egymást közötti kommunikációt biztosított a vezetőség,
 azonban a heti online meetingeken folyamatosan beszámolnak előrehaladásukról. Külön a csapattagok által egyeztetett időpontokban lehetőséget biztosítanak a jelentkező 
 konfliktusok feltárására és hogy erre valamilyen megoldás szülessen rá.
+Fontos kiemelni, hogy más tevékenységnél egy új személy bevonása gyorsíthatja a projekt elkészültét, ez azonban a Code and Business Kft. és a hozzá hasonló
+szoftvergyártó vállalatok esetén az ellenkezője igaz. Ezért a vezetőség részéről az a szándék, hogy a mentorok csupán az egyének
+képességeinek fejlődésében nyújtsanak segítséget, nem pedig, hogy szerves részt képezzenek a csapat munkájában.
 
 A rendszer implementációja:
 --------------------------------
-A projekt megvalósítása java nyelven fog történni, mivel ezt a nyelvet a csoport minden tagja ismeri,
- illetve kiválóan támogatott és rengeteg rendszeralkönyvtár áll szolgálatára. 
-Ezen kívül platformfüggetlen, ami megfelelően beilleszkedik a vállalat termékei közé.
+A projekt megvalósítása java nyelven fog történni, mivel ezt a nyelvet a csoport minden tagja ismeri, illetve kiválóan támogatott és rengeteg 
+rendszeralkönyvtár áll szolgálatára. Ezen kívül platformfüggetlen, ami megfelelően beilleszkedik a vállalat termékei közé.
 Mivel általános célú, megfelel annak a kritériumnak is, hogy a csapat saját maga dönti el projektjük témáját.
+
+
 
 A projekt megvalósítása:
 --------------------------------
 Az számológ minél átláthatóbb, és könnyebb fejlesztése érdekében külön osztályokban valósítjuk meg a megjelenést és a logikai működését is,
  és ezáltal lehetőséget teremtünk, hogy párhuzamosan valósulhassanak meg a fejlesztések.
---------------------------------
-Operátor enum:
+
+
+1) Operátor enum:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A projekt felépítésénél ügyelünk a számológép bővíthetőségére az igények figyelembevétele által. 
 Ezért a műveleti operátorokat egy előre definiált konstansokkal tudjuk biztosítani. Ez által meg tudjuk felelteni 
 a funkcionális specifikációban lerögzített vevői igényeket, és könnyű bővíthetőséget jelent a fejlesztő számára.
 
-Motor osztály:
+2) Motor osztály:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A motor osztályban írjuk le a korábban előre definiált operátorok értelmezését és megvalósítását is. Magát a számológép akutális értékét privát 
 változóban tároljuk, hogy az osztályban leírt privát műveleti operátorok kívül senki nem férhessen hozzá kívülről, és manipulálhassa meg a számológép működését.
 A privát és publikus metódusokat egy privát switch-case metódus segítségével tudjuk összekapcsolni, ezáltal pedig csak közvetett hozzáférést biztosítunk az osztályon kívül.
 
-MotorTest:
+3) MotorTest:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Fontos az, hogy a számológép logikai működését ellenőrizzük, ezért az osztály teszteléséhez unittesztek segítségével tudjuk megvalósítani. 
-Itt minden publikus metódus helyes működését ellenőrizzük.
+Itt minden publikus metódus helyes működését ellenőrizzük. 
 
-View osztály:
+4) View osztály:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Ebben az osztályban írjuk le a számológép kinézetét, definiáljuk a gombokat és az őket érő eseményeket amik tartalmazzák a motor osztály publikus metódushívásait. 
 Ennek segítségével összekötjük a számológép vizuális megjelenését a logikai működéssel és ezáltal egy működőképes számológép tudunk elkészíteni.
+Ennek a pontos megvalósításához előzetesen egy kép formájában történik meg a tervezése. Ezáltal pontos képet ad annak a csapattagnak, aki ezt megvalósítja, hogy a csapat
+által elképzelt számológép mennyire részletes, illetve mely gombok megvalósítása hiányzik esetleg a csapat tervezetéről.
+
+5) Menü osztály:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A menü osztályban kerül megoldásra a projekthez tartozó, ám nem matematikai műveleteket megvalósító menü elkészítese. Ehhez tartozik egy súgó funkció,
+illetve a számológép fejlesztésénél felmerülő különböző területek deklarálása is.
+
+5) Üdvözlő ablak osztály:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Itt kerül megvalósításra az üdvözlő ablak vizuális megjelenésének részletes deklarálása illetve a számológép használatához szükséges rövid ismertető is.
+Ezen a felületen lehet látni a csapattagok neveit, és a számológép aktuális verziószámát is.
