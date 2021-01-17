@@ -30,15 +30,21 @@ public class Menu {
         JFrame frame = new JFrame("Menu");
         frame.setVisible(true);
         frame.setSize(400,200);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        //frame létrehozás
+        
+        JFrame frame2 = new JFrame();
+        frame2.setSize(200,200);
+        frame2.setVisible(false);
+       
+        
         JMenuBar menubar = new JMenuBar();
         frame.setJMenuBar(menubar);
+        frame2.setJMenuBar(menubar);
         
-        //Menubar létrehozása
         JMenu file = new JMenu("File");
         menubar.add(file);
+        JMenuItem uj = new JMenuItem("New");
+        file.add(uj);
         JMenuItem exit = new JMenuItem("Exit");
         file.add(exit);
         
@@ -47,7 +53,7 @@ public class Menu {
         JMenuItem about = new JMenuItem("About");
         help.add(about);
         
-        //Menü opciók megnevezése
+        
         JMenu options = new JMenu("Options");
         menubar.add(options);
         JMenuItem general = new JMenuItem("Általános");
@@ -57,19 +63,30 @@ public class Menu {
         JMenuItem graphic = new JMenuItem("Grafikus");
         graphic.add(graphic);
         
-        //Kilépés 
+         
       class exitAction implements ActionListener{
+            
             @Override
             public void actionPerformed (ActionEvent e){
                 System.exit(0);
+                
             }
         }
         
         exit.addActionListener(new exitAction());
         
+        class newatction implements ActionListener{
+            
+            
+            @Override
+            public void actionPerformed (ActionEvent e){
+                frame2.SetVisible(true);
+                frame.dispose();
+            }
+        } 
+        
     }
     
-   
-   
+
 }
 
