@@ -72,3 +72,16 @@ illetve a számológép fejlesztésénél felmerülő különböző területek d
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Itt kerül megvalósításra az üdvözlő ablak vizuális megjelenésének részletes deklarálása illetve a számológép használatához szükséges rövid ismertető is.
 Ezen a felületen lehet látni a csapattagok neveit, és a számológép aktuális verziószámát is.
+
+
+Teszttterv:
+--------------------------------
+A projekt megvalósítása során folyamatosan tesztelik a csapattagok a számológép működését. Azonban mikor már nem találnak több szükséges javítandó hibát,
+akkor mindannyian egy időben tesztelik le a számológép minden részét, és közben erről egy saját teszt-jegyzőkönyv vázlatot készítenek. Ezután egy meeting keretein belül
+leülnek a csapattagok, és egy végleges, egységes dokumentációt írnak a felmerült problémákról. Ha úgy ítélik meg, akkor további feladatokat határoznak meg, 
+és további vizsgálatokat végeznek, illetve a tesztek során felmerülő hibákat kijavítják.
+Ezt a folyamatot több körben is elvégezhetik, és segítséget nyújthat a hiba elhárításában, hogyha a feladat elvégzője egy másik csapattaggal együtt nézik át. 
+Hiszen annak a csapattag számára nem teljesen ismert a kód, illetve a mögötte húzódó gondolkodásmód, ezért az adott kódrészlet ismertetése segít pontosítani a fogalmakat,
+és tisztázni az esetleges félreértéseket. Ezenkívül lehetőséget nyújt egy más gondolkodásmód megismeréséhez, és gyakoribb, hogy egy friss szempár gyorsabban lelheti meg a hibát,
+mint az, aki magát a kódot megírta. Ennél már kihasználhatják a lehetőséget, hogy a vezetőség előtt nyújtandó prezentációra felkészülhessenek és gyakorolhassanak saját 
+előadásmódjukat. Itt meg tudják ítélni, hogy mit és hogyan szeretnének nem csak a dokumentációban, hanem a prezentáció sroán kiemelni, és ennek megvaólsításának részleteit is.
