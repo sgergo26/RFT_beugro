@@ -74,8 +74,11 @@ public class CalculatorView extends JFrame{
             buttonPanel.add(b);
         }
         
-
-
+         //Elrendezést elősegítő plusz panel
+        JPanel up = new JPanel();
+        up.setLayout(new BorderLayout());
+        //up.add(menubar, BorderLayout.PAGE_START);
+        up.add(display, BorderLayout.PAGE_END);
 
         // Main panel
         JPanel mainPanel = new JPanel();
