@@ -47,7 +47,18 @@ public class Menu {
         JMenuItem about = new JMenuItem("About");
         help.add(about);
         
+        //Menü opciók megnevezése
+        JMenu options = new JMenu("Options");
+        menubar.add(options);
+        JMenuItem general = new JMenuItem("Általános");
+        options.add(general);
+        JMenuItem scientific = new JMenuItem("Tudományos");
+        options.add(scientific);
+        JMenuItem graphic = new JMenuItem("Grafikus");
+        graphic.add(graphic);
         
+                
+    }
     
    
    
