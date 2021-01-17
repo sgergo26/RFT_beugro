@@ -1,4 +1,4 @@
-﻿package rft_calculator;
+package rft_calculator;
 
 import java.awt.*;
 import javax.swing.*;
@@ -20,7 +20,7 @@ public class WelcomeWindow extends JFrame{
         title.setFont(new Font("Dialog",Font.BOLD,18));
         
         //A verizószám megjelenítése
-        JLabel version = new JLabel("Ön jelenleg a v1.6 verziót használja");
+        JLabel version = new JLabel("Ön jelenleg a v2.0 verziót használja");
         version.setFont(new Font("Dialog",Font.PLAIN,12));
         version.setForeground(java.awt.Color.green.darker());
         
