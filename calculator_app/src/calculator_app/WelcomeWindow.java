@@ -1,4 +1,4 @@
-package rft_calculator;
+﻿package rft_calculator;
 
 import java.awt.*;
 import javax.swing.*;
@@ -11,7 +11,7 @@ public class WelcomeWindow extends JFrame{
     public WelcomeWindow() {
         
         // az ablak konfigurálása (méret, átméretezhetőség, stb)
-        Dimension size = new Dimension(455,400);
+        Dimension size = new Dimension(450,400);
         setPreferredSize(size);
         setResizable(false);
         
@@ -26,7 +26,7 @@ public class WelcomeWindow extends JFrame{
         
         //Rövid súgó
         JPanel helppanel = new JPanel();
-        helppanel.setLayout(new GridLayout(6,0));
+        helppanel.setLayout(new GridLayout(7,0));
         JLabel helplabel = new JLabel("Súgó:");
         helplabel.setFont(new Font("Dialog",Font.BOLD,14));
         JLabel help1 = new JLabel("1. Adja meg az első számot!");
@@ -39,6 +39,8 @@ public class WelcomeWindow extends JFrame{
         help4.setFont(new Font("Dialog",Font.PLAIN,12));
         JLabel help5 = new JLabel("5. Írassa ki az eredményt az (=) gommbal!");
         help5.setFont(new Font("Dialog",Font.PLAIN,12));
+        JLabel help6 = new JLabel("6. Válasszon egy szögfüggvényt, majd adja meg a számot!");
+        help6.setFont(new Font("Dialog",Font.PLAIN,12));
         
         helppanel.add(helplabel);
         helppanel.add(help1);
@@ -46,6 +48,7 @@ public class WelcomeWindow extends JFrame{
         helppanel.add(help3);
         helppanel.add(help4);
         helppanel.add(help5);
+        helppanel.add(help6);
         
         //Szerzők cím
         JPanel authorLabel = new JPanel();
