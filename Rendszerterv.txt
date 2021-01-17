@@ -1,3 +1,4 @@
+RENDSZERTERV
 A projekt célja:
 --------------------------------
 A projekt célja, hogy a Code and Business Kft. vezetősége által kinevezetett új, fiatal munkatársakat egy valós igényekre épülő,
@@ -11,16 +12,19 @@ A projektlezárása után többségi szavazással fog eldőlni, hogy kit tartana
 A projekt határidejét a vezetőség tűzte ki célul, de a temáját és feladatát a csapattagok többségi döntése alapján született. 
 A határidőre egy kész programot kell a csapatnak elkészítenie, amit végül egy prezentációval kell a vezetőségnek bemutatniuk minden írásos dokumentációval együtt.
 
+
 Elvárt eredmény:
 --------------------------------
 Egy olyan működő képes számolgép létrehozása az elvárt időkereten belül ami, ingyenes és egyszerűen használható,
 átlátható program amin megjelennek a bevitt számok,elvégzi a megadott műveleteket és kielégíti az mentorok vizuális igényeit is.
 Legyenek menüpontjai is és jelenjen meg egy üdvözlő felület.
 
+
 Használt Szoftverek:
 --------------------------------
 	-NetBeans IDE
 	-Java SE
+	-JDK 8.2
 
 Feladatmegosztás:
 --------------------------------
@@ -35,6 +39,7 @@ konfliktusok feltárására és hogy erre valamilyen megoldás szülessen rá.
 Fontos kiemelni, hogy más tevékenységnél egy új személy bevonása gyorsíthatja a projekt elkészültét, ez azonban a Code and Business Kft. és a hozzá hasonló
 szoftvergyártó vállalatok esetén az ellenkezője igaz. Ezért a vezetőség részéről az a szándék, hogy a mentorok csupán az egyének
 képességeinek fejlődésében nyújtsanak segítséget, nem pedig, hogy szerves részt képezzenek a csapat munkájában.
+
 
 A megvalósítandó rendszer kiválasztásának szempontjai:
 --------------------------------------------------------------
@@ -64,16 +69,19 @@ Szorzás   (*)
 Törlés    (C)
 ---------------------------------------------------------------------------------------
 
+
 Fogalomtár
 --------------------------------
     -Integrált fejlesztői környezet(IDE)          -egy olyan szoftveralkalmazás,amely átfogó létesítményeket 
 	                                               biztosít a számítógépes programozók számára a szoftverfejlesztéshez
+
 
 A rendszer implementációja:
 --------------------------------
 A projekt megvalósítása java nyelven fog történni, mivel ezt a nyelvet a csoport minden tagja ismeri, illetve kiválóan támogatott és rengeteg 
 rendszeralkönyvtár áll szolgálatára. Ezen kívül platformfüggetlen, ami megfelelően beilleszkedik a vállalat termékei közé.
 Mivel általános célú, megfelel annak a kritériumnak is, hogy a csapat saját maga dönti el projektjük témáját.
+
 
 A projekt megvalósítása:
 --------------------------------
@@ -87,16 +95,19 @@ A projekt felépítésénél ügyelünk a számológép bővíthetőségére az 
 Ezért a műveleti operátorokat egy előre definiált konstansokkal tudjuk biztosítani. Ez által meg tudjuk felelteni 
 a funkcionális specifikációban lerögzített vevői igényeket, és könnyű bővíthetőséget jelent a fejlesztő számára.
 
+
 2) Motor osztály:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A motor osztályban írjuk le a korábban előre definiált operátorok értelmezését és megvalósítását is. Magát a számológép akutális értékét privát 
 változóban tároljuk, hogy az osztályban leírt privát műveleti operátorok kívül senki nem férhessen hozzá kívülről, és manipulálhassa meg a számológép működését.
 A privát és publikus metódusokat egy privát switch-case metódus segítségével tudjuk összekapcsolni, ezáltal pedig csak közvetett hozzáférést biztosítunk az osztályon kívül.
 
+
 3) MotorTest:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Fontos az, hogy a számológép logikai működését ellenőrizzük, ezért az osztály teszteléséhez unittesztek segítségével tudjuk megvalósítani. 
 Itt minden publikus metódus helyes működését ellenőrizzük. 
+
 
 4) View osztály:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -105,15 +116,18 @@ Ennek segítségével összekötjük a számológép vizuális megjelenését a 
 Ennek a pontos megvalósításához előzetesen egy kép formájában történik meg a tervezése. Ezáltal pontos képet ad annak a csapattagnak, aki ezt megvalósítja, hogy a csapat
 által elképzelt számológép mennyire részletes, illetve mely gombok megvalósítása hiányzik esetleg a csapat tervezetéről.
 
+
 5) Menü osztály:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A menü osztályban kerül megoldásra a projekthez tartozó, ám nem matematikai műveleteket megvalósító menü elkészítese. Ehhez tartozik egy súgó funkció,
-illetve a számológép fejlesztésénél felmerülő különböző területek deklarálása is.
+illetve a számológép fejlesztésénél felmerülő különböző matematikai területek deklarálása is, az általánostól kezdve a specifikált területek felé.
 
-5) Üdvözlő ablak osztály:
+
+6) Üdvözlő ablak osztály:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Itt kerül megvalósításra az üdvözlő ablak vizuális megjelenésének részletes deklarálása illetve a számológép használatához szükséges rövid ismertető is.
 Ezen a felületen lehet látni a csapattagok neveit, és a számológép aktuális verziószámát is.
+
 
 
 Teszttterv:
@@ -126,8 +140,10 @@ Ezt a folyamatot több körben is elvégezhetik, és segítséget nyújthat a hi
 Hiszen annak a csapattag számára nem teljesen ismert a kód, illetve a mögötte húzódó gondolkodásmód, ezért az adott kódrészlet ismertetése segít pontosítani a fogalmakat,
 és tisztázni az esetleges félreértéseket. Ezenkívül lehetőséget nyújt egy más gondolkodásmód megismeréséhez, és gyakoribb, hogy egy friss szempár gyorsabban lelheti meg a hibát,
 mint az, aki magát a kódot megírta. Ennél már kihasználhatják a lehetőséget, hogy a vezetőség előtt nyújtandó prezentációra felkészülhessenek és gyakorolhassanak saját 
-előadásmódjukat. Itt meg tudják ítélni, hogy mit és hogyan szeretnének nem csak a dokumentációban, hanem a prezentáció sroán kiemelni,
-és ennek megvaólsításának részleteit is.
+előadásmódjukat. Itt meg tudják ítélni, hogy mit és hogyan szeretnének nem csak a dokumentációban, hanem a prezentáció soránn kiemelni,
+és ennek megvalósításának részleteit is.
+
+
 
 Karbantartási terv:
 --------------------------------
