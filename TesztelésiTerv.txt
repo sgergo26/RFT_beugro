@@ -2,6 +2,19 @@ Tesztelési terv:
 ----------------
 ----------------
 
+Teszteléshez kapcsolódó határidők:
+------------------------------------------
+	
+Funkciótesztek:	
+
+	- Általános funkcionális teszt:		2021.01.17
+	- Szélsőérték funkcionális teszt:	2021.01.17.
+	
+Teljesítményteszt:
+
+	- Nagy mennyiségű bemenő adat:		2021.01.17
+
+Tesztelési jegyzőkönyv elkészülte:		2021.01.17
 
 Funkciótesztek:	
 
