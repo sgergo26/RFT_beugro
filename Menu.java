@@ -57,7 +57,16 @@ public class Menu {
         JMenuItem graphic = new JMenuItem("Grafikus");
         graphic.add(graphic);
         
-                
+        //Kilépés 
+      class exitAction implements ActionListener{
+            @Override
+            public void actionPerformed (ActionEvent e){
+                System.exit(0);
+            }
+        }
+        
+        exit.addActionListener(new exitAction());
+        
     }
     
    
