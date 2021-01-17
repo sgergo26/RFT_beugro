@@ -36,10 +36,12 @@ public class Menu {
         frame2.setSize(200,200);
         frame2.setVisible(false);
        
+       
         //frame létrehozás
         JMenuBar menubar = new JMenuBar();
         frame.setJMenuBar(menubar);
         frame2.setJMenuBar(menubar);
+        
         //Menubar létrehozása
         JMenu file = new JMenu("File");
         menubar.add(file);
@@ -52,6 +54,15 @@ public class Menu {
         menubar.add(help);
         JMenuItem about = new JMenuItem("About");
         help.add(about);
+        JMenuItem etc = new JMenuItem("Others");
+        help.add(etc);
+        
+         JMenu edit = new JMenu("Edit");
+        menubar.add(edit);
+        JMenuItem delete = new JMenuItem("Delete");
+        edit.add(delete); 
+        JMenuItem find = new JMenuItem("Find...");
+        edit.add(find); 
         
         //Menü opciók megnevezése
         JMenu options = new JMenu("Options");
@@ -61,7 +72,7 @@ public class Menu {
         JMenuItem scientific = new JMenuItem("Tudományos");
         options.add(scientific);
         JMenuItem graphic = new JMenuItem("Grafikus");
-        graphic.add(graphic);
+        options.add(graphic);
         
         //Kilépés 
       class exitAction implements ActionListener{
@@ -72,9 +83,10 @@ public class Menu {
                 
             }
         }
-        //Új ablak megnyitása
+        
         exit.addActionListener(new exitAction());
         
+       //Új ablak megnyitása
         class newatction implements ActionListener{
             
             
@@ -84,6 +96,8 @@ public class Menu {
                 frame.dispose();
             }
         } 
+        
+    }
         
     }
     
