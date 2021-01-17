@@ -1,0 +1,18 @@
+Tesztelési terv:
+----------------
+----------------
+
+
+Funkciótesztek:	
+
+	- Általános funkcionális teszt:
+			- Az általános funkció teszt az alkalmazás megnyitásával kezdődik,miután megnyitottuk meg kell hogy jelenjen egy üdvözlő ablak
+			  ahol láthatjuka hozzákészült súgót,a verzió számot, a program készítőit illetve egy gombot amivel a súgót bezártjuk.
+			- A Súgó tesztelése a bezárásával zárul aztán megjelenik a kijelző felület ahol a számok és műveletek láthatók illetve felette egy menüsáv.
+			- Ellenőrizzük hogy a menüsáv lenyíllik- e és megjelennek rajta a megadott opciók. Következőnek ellenőrizzük a gombok működését.
+			- Megnézzük hogy a számok megjelennek a a gombjaik benyomása után és hogy egymás utáni megnyomásra ugyanazt a számot annyiszor írja-e ki, ahányszor a felhasználó lenyomta.
+			- Megnézzük hogy a "C" gomb lenyomása után alapértelmezetbe állapotba kerül e a kijelző. 
+			- Művelet ellenőrzés.Kipróbáljuk hogy a számológép eltudja e végezni a kívánt műveleteket és helyes végeredményt adnak-e.
+			-Hiba üzenet kiírása. Megnézzük hogy ha érvénytelen műveletet gépeltünk be kiírja-e a hibaüzenetet.
+
+
