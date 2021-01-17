@@ -56,7 +56,6 @@ Egyik fő szempontunk hogy a Java is és a NetBeans is ingyenes letölthető és
 megtakarítunk azzal hogy ezeket használjuk.
 Mivel a Java és a NetBeans és elterjedt és népszerű ezért megakadás esetén lehetőségünk van interneten,fórumokon,oktatási segédanyagokat illetve segítséget találnunk.
 
-
  
 --------------------------------------------------------------------------------------------
 Szükséges metódusok felvázolása:
@@ -129,7 +128,6 @@ Itt kerül megvalósításra az üdvözlő ablak vizuális megjelenésének rés
 Ezen a felületen lehet látni a csapattagok neveit, és a számológép aktuális verziószámát is.
 
 
-
 Teszttterv:
 --------------------------------
 A projekt megvalósítása során folyamatosan tesztelik a csapattagok a számológép működését. Azonban mikor már nem találnak több szükséges javítandó hibát,
@@ -144,9 +142,12 @@ előadásmódjukat. Itt meg tudják ítélni, hogy mit és hogyan szeretnének n
 és ennek megvalósításának részleteit is.
 
 
-
 Karbantartási terv:
 --------------------------------
 A számológép nagy karbantartást nem igényel
 Fejlesztések felmerülése esetében a számológépet folyamatosan lehet bővíteni új funkciókkal 
 és elemekkel ami kielégíti az igényeket
+
+Rendszertervet készítette:
+	Ardó Virginia Katalin,
+	Horváth Gabriella
