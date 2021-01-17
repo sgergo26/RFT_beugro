@@ -15,5 +15,13 @@ Funkciótesztek:
 			- Megnézzük hogy a "C" gomb lenyomása után alapértelmezetbe állapotba kerül e a kijelző. 
 			- Művelet ellenőrzés.Kipróbáljuk hogy a számológép eltudja e végezni a kívánt műveleteket és helyes végeredményt adnak-e.
 			- Hiba üzenet kiírása. Megnézzük hogy ha érvénytelen műveletet gépeltünk be kiírja-e a hibaüzenetet.
+			
+Tesztelési jegyzőkönyv:
 
+
+Az elfogadható működőképesség ismérvei:
+---------------------------------------
+
+    A tesztelési jegyzőkönyv mezői 98%-ban MEGFELELT minősítésűek, azaz a követelmény specifikációban a felek
+    által kölcsönösen elfogadott funkciók működnek.
 
