@@ -32,3 +32,51 @@ Ardó Virgínia Katalin FJ7N0W
 Banos Noémi           U75RBH
 Horváth Gabriella     R8X8R6
 Seres Gergő           HMX501
+
+Teszt:
+------
+----------------------------------------------
+| Általános funkcionális teszt:   |           | 
+| -Számok megjelenítése kijelzőn  | MEGFELELT | 
+----------------------------------------------
+| Általános funkcionális teszt:   |           | 
+| -Összeadás művelet              | MEGFELELT | 
+|---------------------------------------------
+| Általános funkcionális teszt:   |           |         
+| -Kivonás művelet                | MEGFELELT |  
+|---------------------------------------------
+| Általános funkcionális teszt:   |           |         
+| -Szorzás művelet                | MEGFELELT | 
+|---------------------------------------------
+| Általános funkcionális teszt:   |           |         
+| -Osztás művelet                 | MEGFELELT | 
+|---------------------------------------------
+| Általános funkcionális teszt:   |           |         
+| -Szinusz számítás               | MEGFELELT | 
+|----------------------------------------------
+| Általános funkcionális teszt:   |           |         
+| -Koszinusz számítás             | MEGFELELT | 
+|----------------------------------------------
+| Általános funkcionális teszt:   |           |         
+| -Logaritmus számítás            | MEGFELELT | 
+|----------------------------------------------
+| Általános funkcionális teszt:   |           |         
+| - C gombbal való törlés         | MEGFELELT | 
+|---------------------------------------------
+| Általános funkcionális teszt:   |           |         
+| -Súgó megjelenítése             | MEGFELELT | 
+|---------------------------------------------
+| Általános funkcionális teszt:   |           |         
+| -Súgó bezárása                  | MEGFELELT | 
+|---------------------------------------------
+| Általános funkcionális teszt:   |           |         
+| -Menüsáv megjelenítése          | MEGFELELT | 
+|---------------------------------------------
+| Szélsőérték funkcionális teszt: |           |         
+| -Exit-tel kilépés               | MEGFELELT |  
+|---------------------------------------------
+| Teljesítményteszt:              |           |         
+| - nagy mennyiségű bemenő adat   | MEGFELELT |  
+----------------------------------------------
+
+A teszt sikeresen zárult, minden funkció megfelelően működik.
