@@ -25,3 +25,10 @@ Az elfogadható működőképesség ismérvei:
     A tesztelési jegyzőkönyv mezői 98%-ban MEGFELELT minősítésűek, azaz a követelmény specifikációban a felek
     által kölcsönösen elfogadott funkciók működnek.
 
+A tesztelést végzők:
+--------------------
+
+Ardó Virgínia Katalin FJ7N0W
+Banos Noémi           U75RBH
+Horváth Gabriella     R8X8R6
+Seres Gergő           HMX501
