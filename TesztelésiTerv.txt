@@ -28,6 +28,13 @@ Funkciótesztek:
 			- Megnézzük hogy a "C" gomb lenyomása után alapértelmezetbe állapotba kerül e a kijelző. 
 			- Művelet ellenőrzés.Kipróbáljuk hogy a számológép eltudja e végezni a kívánt műveleteket és helyes végeredményt adnak-e.
 			- Hiba üzenet kiírása. Megnézzük hogy ha érvénytelen műveletet gépeltünk be kiírja-e a hibaüzenetet.
+Teljesítményteszt:
+
+- Nagy mennyiségű bemenő adat:
+	
+		       Ezt a tesztet a következőképpen lehet elvégezni. Adott egy 2 perces időintervallum, és ez alatt
+		       120 gombnyomást kell elvégezni a felületen és közben figyelni, hogy megfelelően-e a felület.
+		       Ha nem akad ki, nem fagy le, akkor a teszt sikeres.
 			
 Tesztelési jegyzőkönyv:
 
