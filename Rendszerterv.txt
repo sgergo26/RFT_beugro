@@ -11,6 +11,17 @@ A projektlezárása után többségi szavazással fog eldőlni, hogy kit tartana
 A projekt határidejét a vezetőség tűzte ki célul, de a temáját és feladatát a csapattagok többségi döntése alapján született. 
 A határidőre egy kész programot kell a csapatnak elkészítenie, amit végül egy prezentációval kell a vezetőségnek bemutatniuk minden írásos dokumentációval együtt.
 
+Elvárt eredmény:
+--------------------------------
+Egy olyan működő képes számolgép létrehozása az elvárt időkereten belül ami, ingyenes és egyszerűen használható,
+átlátható program amin megjelennek a bevitt számok,elvégzi a megadott műveleteket és kielégíti az mentorok vizuális igényeit is.
+Legyenek menüpontjai is és jelenjen meg egy üdvözlő felület.
+
+Használt Szoftverek:
+--------------------------------
+	-NetBeans IDE
+	-Java SE
+
 Feladatmegosztás:
 --------------------------------
 A COVID-19 miatt kitörő világjárvány miatt a vállalat átállt a home-office-ra, a munkatársak saját otthonaikban folytattják munkáikat. 
@@ -25,13 +36,44 @@ Fontos kiemelni, hogy más tevékenységnél egy új személy bevonása gyorsít
 szoftvergyártó vállalatok esetén az ellenkezője igaz. Ezért a vezetőség részéről az a szándék, hogy a mentorok csupán az egyének
 képességeinek fejlődésében nyújtsanak segítséget, nem pedig, hogy szerves részt képezzenek a csapat munkájában.
 
+A megvalósítandó rendszer kiválasztásának szempontjai:
+--------------------------------------------------------------
+A Java megbízható ,elterjedt a programozók körében a nagyvállalatok nagyobb százaléka is ezt használja ,illetve sok területen használható.
+A Java-hoz írt keretrendszerek többségében rendkívül hatalmasak, éppen ezért rengeteg bank, pénzintézet és multinacionális cég használja ezeket a nyelveket az üzleti szférában.
+Sok energiát és idő megtakarítható vele mivel gyorsan és egyszerűen megy az csoportmunka ugyanabban a fejlesztési környezetben.
+Különböző eszközök és funkciók segítenek az erőforrások elrendezésében, a hibák elkerülésében.
+A Java-hoz több IDE-t (integrált fejlesztői környezetet) és kiegészítő eszközt alakítottak ki, amelyek jelentősen megkönnyítik a programozást.
+A Netbeans A Java nyelvén alapul ezért ez egy megfelelő szoftvernek mellé, ezenkívűl azt is figyelmbe vettük hogy Swing rendszeren ,ami lehető teszi 
+hogy, asztali alkalmazásokat fejlesszünk és különféle platformokon is futtatható mint Windows,Mac Os vagy Linux.
+A Java ajánlott kezdő nyelvnek is mert egyszerű, logikus, jól felépített, és megtanulásával kifejezetten erős programozói alapokat lehet szerezni. 
+A Java segítségével könnyen megértheted és használhatod az objektumorientáltságot, aminek segítségével teljesen logikusan és életszerűen strukturálhatod az alkalmazásodat.
+Egyik fő szempontunk hogy a Java is és a NetBeans is ingyenes letölthető és telepíthető így a felmerükő költséget miatt nem kell agggódnunk és
+megtakarítunk azzal hogy ezeket használjuk.
+Mivel a Java és a NetBeans és elterjedt és népszerű ezért megakadás esetén lehetőségünk van interneten,fórumokon,oktatási segédanyagokat illetve segítséget találnunk.
+
+
+ 
+--------------------------------------------------------------------------------------------
+Szükséges metódusok felvázolása:
+Szám gombok megjelenítése
+Műveletek végzése:
+Összeadás (+) 
+Kivonás   (-)
+Osztás    (/)
+Szorzás   (*)
+Törlés    (C)
+---------------------------------------------------------------------------------------
+
+Fogalomtár
+--------------------------------
+    -Integrált fejlesztői környezet(IDE)          -egy olyan szoftveralkalmazás,amely átfogó létesítményeket 
+	                                               biztosít a számítógépes programozók számára a szoftverfejlesztéshez
+
 A rendszer implementációja:
 --------------------------------
 A projekt megvalósítása java nyelven fog történni, mivel ezt a nyelvet a csoport minden tagja ismeri, illetve kiválóan támogatott és rengeteg 
 rendszeralkönyvtár áll szolgálatára. Ezen kívül platformfüggetlen, ami megfelelően beilleszkedik a vállalat termékei közé.
 Mivel általános célú, megfelel annak a kritériumnak is, hogy a csapat saját maga dönti el projektjük témáját.
-
-
 
 A projekt megvalósítása:
 --------------------------------
@@ -77,11 +119,18 @@ Ezen a felületen lehet látni a csapattagok neveit, és a számológép aktuál
 Teszttterv:
 --------------------------------
 A projekt megvalósítása során folyamatosan tesztelik a csapattagok a számológép működését. Azonban mikor már nem találnak több szükséges javítandó hibát,
-akkor mindannyian egy időben tesztelik le a számológép minden részét, és közben erről egy saját teszt-jegyzőkönyv vázlatot készítenek. Ezután egy meeting keretein belül
-leülnek a csapattagok, és egy végleges, egységes dokumentációt írnak a felmerült problémákról. Ha úgy ítélik meg, akkor további feladatokat határoznak meg, 
-és további vizsgálatokat végeznek, illetve a tesztek során felmerülő hibákat kijavítják.
+akkor mindannyian egy időben tesztelik le a számológép minden részét, és közben erről egy saját teszt-jegyzőkönyv vázlatot készítenek.
+Ezután egy meeting keretein belül leülnek a csapattagok, és egy végleges, egységes dokumentációt írnak a felmerült problémákról.
+Ha úgy ítélik meg, akkor további feladatokat határoznak meg, és további vizsgálatokat végeznek, illetve a tesztek során felmerülő hibákat kijavítják.
 Ezt a folyamatot több körben is elvégezhetik, és segítséget nyújthat a hiba elhárításában, hogyha a feladat elvégzője egy másik csapattaggal együtt nézik át. 
 Hiszen annak a csapattag számára nem teljesen ismert a kód, illetve a mögötte húzódó gondolkodásmód, ezért az adott kódrészlet ismertetése segít pontosítani a fogalmakat,
 és tisztázni az esetleges félreértéseket. Ezenkívül lehetőséget nyújt egy más gondolkodásmód megismeréséhez, és gyakoribb, hogy egy friss szempár gyorsabban lelheti meg a hibát,
 mint az, aki magát a kódot megírta. Ennél már kihasználhatják a lehetőséget, hogy a vezetőség előtt nyújtandó prezentációra felkészülhessenek és gyakorolhassanak saját 
-előadásmódjukat. Itt meg tudják ítélni, hogy mit és hogyan szeretnének nem csak a dokumentációban, hanem a prezentáció sroán kiemelni, és ennek megvaólsításának részleteit is.
+előadásmódjukat. Itt meg tudják ítélni, hogy mit és hogyan szeretnének nem csak a dokumentációban, hanem a prezentáció sroán kiemelni,
+és ennek megvaólsításának részleteit is.
+
+Karbantartási terv:
+--------------------------------
+A számológép nagy karbantartást nem igényel
+Fejlesztések felmerülése esetében a számológépet folyamatosan lehet bővíteni új funkciókkal 
+és elemekkel ami kielégíti az igényeket
