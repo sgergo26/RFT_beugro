@@ -12,9 +12,9 @@ az üzleti folyamatok megértése mellett.
 _____________________________________________
 Megnevezés							Munkadíj
 
-Általános célú Java számológép		32 000 Ft
+Általános célú Java számológép		32 500X1,1X4 = 143 000 Ft
 _____________________________________________
-Összesen							32 000 Ft
+Összesen							143 000 Ft
 ÁFA öszeg                0% (+):         0 Ft
 
 Az ÁFA törvény §(1) bekezdés b) pontja szerinti szolgáltatás, az ÁFÁ-t a megrendelő fizeti!
